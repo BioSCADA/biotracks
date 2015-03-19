@@ -67,7 +67,7 @@ public class PolarMessageParser implements MessageParser {
     heartrateValid = packetValid(buffer, 0);
     // Minimum length Polar packets is 8, so stop search 8 bytes before buffer
     // ends.
-    // Log.d( "POLAR", "buffer.length = " + buffer.length );
+    Log.d( "POLAR", "buffer.length = " + buffer.length );
     /*
      * for (int i = 0; i < buffer.length - 8; i++) { heartrateValid =
      * packetValid(buffer,i); if (heartrateValid) { heartRate +=

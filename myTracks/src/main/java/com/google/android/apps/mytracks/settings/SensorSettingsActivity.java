@@ -108,20 +108,14 @@ public class SensorSettingsActivity extends AbstractSettingsActivity {
     if(hasAntSupport) { 
         optionsList.add(getString(R.string.settings_sensor_type_ant));
     }
-    optionsList.add(getString(R.string.value_none));
+
     String[] options = optionsList.toArray(new String[0]);
     
     ArrayList<String> valuesList = new ArrayList<String>();
     for(String iterator : getResources().getStringArray(R.array.sensor_type_bluetooth_values)) {
         valuesList.add(iterator);
     }
-    if(hasBLESupport) {
-      valuesList.add(getString(R.string.sensor_type_value_ble));
-    }
-    if(hasAntSupport) { 
-        valuesList.add(getString(R.string.sensor_type_value_ant));
-    }
-    valuesList.add(getString(R.string.sensor_type_value_none));
+
     String[] values = valuesList.toArray(new String[0]);
   
     if (!hasAntSupport && value.equals(R.string.sensor_type_value_ant)) {
