@@ -68,7 +68,8 @@ public class ChartView extends View {
   public static final int POWER_SERIES = 5;
   public static final int ATTENTION_SERIES = 6;
   public static final int MEDITATION_SERIES = 7;
-  
+    public static final int BPM_SERIES = 8;
+    public static final int RMSSD_SERIES = 9;
   private static final int TARGET_X_AXIS_INTERVALS = 4;
 
   private static final int MIN_ZOOM_LEVEL = 1;

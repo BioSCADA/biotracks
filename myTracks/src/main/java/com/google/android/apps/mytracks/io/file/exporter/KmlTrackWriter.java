@@ -89,7 +89,8 @@ public class KmlTrackWriter implements TrackWriter {
   private boolean hasHeartRate;
   private boolean hasAttention;
   private boolean hasMeditation;
-
+    private boolean hasBPM;
+    private boolean hasRMSSD;
   public KmlTrackWriter(Context context, boolean multiple, boolean playTrack) {
     this(context, multiple, playTrack, new DescriptionGeneratorImpl(context));
   }
@@ -250,6 +251,8 @@ public class KmlTrackWriter implements TrackWriter {
       hasPower = false;
       hasCadence = false;
       hasHeartRate = false;
+        hasBPM = false;
+        hasRMSSD = false;
       powerList.clear();
       cadenceList.clear();
       heartRateList.clear();
@@ -287,6 +290,8 @@ public class KmlTrackWriter implements TrackWriter {
         int power = -1;
         int cadence = -1;
         int heartRate = -1;
+        int bpm = -1;
+        int rmssd = -1;
         int attention = -1; 
         int meditation = -1;
         if (sensorDataSet != null) {
@@ -311,6 +316,18 @@ public class KmlTrackWriter implements TrackWriter {
               heartRate = sensorData.getValue();
             }
           }
+            if (sensorDataSet.hasBPM()) {
+                SensorData sensorData = sensorDataSet.getBPM();
+                if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                    bpm =  sensorData.getValue() ;
+                }
+            }
+            if (sensorDataSet.hasRMSSD()) {
+                SensorData sensorData = sensorDataSet.getRMSSD();
+                if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                    rmssd =  sensorData.getValue() ;
+                }
+            }
           if (sensorDataSet.hasAttention()) {
             SensorData sensorData = sensorDataSet.getAttention();
             if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {

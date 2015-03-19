@@ -489,8 +489,16 @@ limitations under the License.
     Cadence (rpm)
   </string>
   <string name="description_sensor_heart_rate"
-    translation_description="Label for heart rate with its unit beats per minute (ms).">
+    translation_description="Label for heart rate with its unit milieconds (ms).">
     Heart rate (ms)
+  </string>
+    <string name="description_sensor_heart_rate_bpm"
+        translation_description="Label for heart rate with its unit beats per minute (bpm).">
+    Heart rate BPM (bpm)
+  </string>
+    <string name="description_sensor_heart_rate_rmssd"
+        translation_description="Label for heart rate with its unit  (u).">
+    Heart rate RMSSD (u)
   </string>
    <string name="description_sensor_attention"
     translation_description="Label for attention of neurosky.">
@@ -1502,10 +1510,38 @@ limitations under the License.
   </string>
   <string name="sensor_state_heart_rate_value"
     translation_description="In the 'Sensor state' page, the value for the 'Heart rate'. E.g.,
-      'Hear rate: 100 bpm'.
+      'Hear rate: 700 ms'.
+
+      %1$d a number. E.g., '700'.">
+    %1$d ms
+  </string>
+    <string name="sensor_state_heart_rate_bpm"
+        translation_description="In the 'Sensor state' page, the label for the heart rate from a heart
+      rate sensor. E.g., 'Hear rate: 100 bpm'.
+
+      Character limit: ~23 (1 line)">
+    BPM
+  </string>
+  <string name="sensor_state_heart_rate_bpm_value"
+      translation_description="In the 'Sensor state' page, the value for the 'Heart rate BPM'. E.g.,
+      'Hear rate BPM: 100 bpm'.
 
       %1$d a number. E.g., '100'.">
-    %1$d ms
+    %1$d bpm
+  </string>
+    <string name="sensor_state_heart_rate_rmssd"
+        translation_description="In the 'Sensor state' page, the label for the heart rate from a heart
+      rate sensor. E.g., 'Hear rate: 100 bpm'.
+
+      Character limit: ~23 (1 line)">
+    RMSSD
+  </string>
+  <string name="sensor_state_heart_rate_rmssd_value"
+      translation_description="In the 'Sensor state' page, the value for the 'Heart rate RMSSD'. E.g.,
+      'Hear rate RMSSD: 100'.
+
+      %1$d a number. E.g., '100'.">
+    %1$d
   </string>
   <string name="sensor_state_attention"
     translation_description="In the 'Sensor state' page, the label for the attention. E.g., 'Attention 80'.

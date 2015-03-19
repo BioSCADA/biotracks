@@ -20,8 +20,10 @@ limitations under the License.
   <string name="auto_resume_track_timeout_key">autoResumeTrackTimeout</string>
   <string name="chart_show_cadence_key">chartShowCadence</string>
   <string name="chart_show_elevation_key">chartShowElevation</string>
-  <string name="chart_show_heart_rate_key">chartShowHeartRate</string> 
-  <string name="chart_show_attention_key">chartShowAttention</string>
+  <string name="chart_show_heart_rate_key">chartShowHeartRate</string>
+    <string name="chart_show_bpm_key">chartShowBPM</string>
+    <string name="chart_show_rmssd_key">chartShowRMSSD</string>
+    <string name="chart_show_attention_key">chartShowAttention</string>
   <string name="chart_show_meditation_key">chartShowMeditation</string>
   <string name="chart_show_pacer_key">chartShowPacer</string>
   <string name="chart_show_power_key">chartShowPower</string>  

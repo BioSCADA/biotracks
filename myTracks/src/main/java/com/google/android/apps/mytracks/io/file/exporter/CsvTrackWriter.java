@@ -155,6 +155,8 @@ public class CsvTrackWriter implements TrackWriter {
         context.getString(R.string.description_sensor_power),
         context.getString(R.string.description_sensor_cadence),
         context.getString(R.string.description_sensor_heart_rate),
+            context.getString(R.string.description_sensor_heart_rate_bpm),
+            context.getString(R.string.description_sensor_heart_rate_rmssd),
         context.getString(R.string.description_sensor_attention),
         context.getString(R.string.description_sensor_meditation));
   }
@@ -180,6 +182,8 @@ public class CsvTrackWriter implements TrackWriter {
     String power = null;
     String cadence = null;
     String heartRate = null;
+      String bpm = null;
+      String rmssd = null;
     String attention = null;
     String meditation = null;
     if (location instanceof MyTracksLocation) {
@@ -210,6 +214,18 @@ public class CsvTrackWriter implements TrackWriter {
             lastHeartRate = sensorData.getValue(); 
           }
         }
+          if (sensorDataSet.hasBPM()) {
+              SensorData sensorData = sensorDataSet.getBPM();
+              if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                  bpm = Double.toString(sensorData.getValue());
+              }
+          }
+          if (sensorDataSet.hasRMSSD()) {
+              SensorData sensorData = sensorDataSet.getRMSSD();
+              if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                  rmssd = Double.toString(sensorData.getValue());
+              }
+          }
         if (sensorDataSet.hasAttention()) {
           SensorData sensorData = sensorDataSet.getAttention();
           if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {

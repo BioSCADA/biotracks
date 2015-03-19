@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="antlib">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/myTracks/libs/antlib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

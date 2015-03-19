@@ -32,6 +32,14 @@ limitations under the License.
       android:defaultValue="true"
       android:key="@string/chart_show_heart_rate_key"
       android:title="@string/sensor_state_heart_rate" />
+      <CheckBoxPreference
+          android:defaultValue="true"
+          android:key="@string/chart_show_bpm_key"
+          android:title="@string/sensor_state_heart_rate_bpm" />
+      <CheckBoxPreference
+          android:defaultValue="true"
+          android:key="@string/chart_show_rmssd_key"
+          android:title="@string/sensor_state_heart_rate_rmssd" />
     <CheckBoxPreference
       android:defaultValue="true"
       android:key="@string/chart_show_attention_key"

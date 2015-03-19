@@ -73,7 +73,7 @@ public class ChartFragment extends Fragment implements TrackDataListener {
 
   // Modes of operation
   private boolean chartByDistance = true;
-  private boolean[] chartShow = new boolean[] { true, true, true, true, true, true, true, true };
+  private boolean[] chartShow = new boolean[] { true, true, true, true, true, true, true, true, true, true };
 
   // UI elements
   private ChartView chartView;
@@ -346,6 +346,14 @@ public class ChartFragment extends Fragment implements TrackDataListener {
         R.string.chart_show_heart_rate_key, PreferencesUtils.CHART_SHOW_HEART_RATE_DEFAULT))) {
       needUpdate = true;
     }
+      if (setSeriesEnabled(ChartView.BPM_SERIES, PreferencesUtils.getBoolean(getActivity(),
+              R.string.chart_show_bpm_key, PreferencesUtils.CHART_SHOW_BPM_DEFAULT))) {
+          needUpdate = true;
+      }
+      if (setSeriesEnabled(ChartView.RMSSD_SERIES, PreferencesUtils.getBoolean(getActivity(),
+              R.string.chart_show_rmssd_key, PreferencesUtils.CHART_SHOW_RMSSD_DEFAULT))) {
+          needUpdate = true;
+      }
     if (setSeriesEnabled(ChartView.ATTENTION_SERIES, PreferencesUtils.getBoolean(getActivity(),
         R.string.chart_show_attention_key, PreferencesUtils.CHART_SHOW_ATTENTION_DEFAULT))) {
       needUpdate = true;
@@ -455,6 +463,8 @@ public class ChartFragment extends Fragment implements TrackDataListener {
    * data[6] = power <br>
    *  data[7] = attention <br>
    *   data[8] = meditation <br>
+   *       *   data[9] = bpm <br>
+   *           *   data[10] = rmssd <br>
    * @param location the location
    * @param data the data point to fill in, can be null
    */
@@ -465,6 +475,8 @@ public class ChartFragment extends Fragment implements TrackDataListener {
     double speed = Double.NaN;
     double pace = Double.NaN;
     double heartRate = Double.NaN;
+      double bpm = Double.NaN;
+      double rmssd = Double.NaN;
     double attention = Double.NaN;
     double meditation = Double.NaN;
     double cadence = Double.NaN;
@@ -503,6 +515,16 @@ public class ChartFragment extends Fragment implements TrackDataListener {
           && sensorDataSet.getHeartRate().hasValue()) {
         heartRate = sensorDataSet.getHeartRate().getValue();
       }
+        if (sensorDataSet.hasBPM()
+                && sensorDataSet.getBPM().getState() == Sensor.SensorState.SENDING
+                && sensorDataSet.getBPM().hasValue()) {
+            bpm = sensorDataSet.getBPM().getValue();
+        }
+        if (sensorDataSet.hasRMSSD()
+                && sensorDataSet.getRMSSD().getState() == Sensor.SensorState.SENDING
+                && sensorDataSet.getRMSSD().hasValue()) {
+            rmssd = sensorDataSet.getRMSSD().getValue();
+        }
       if (sensorDataSet.hasAttention()
           && sensorDataSet.getAttention().getState() == Sensor.SensorState.SENDING
           && sensorDataSet.getAttention().hasValue()) {
@@ -535,6 +557,8 @@ public class ChartFragment extends Fragment implements TrackDataListener {
       data[6] = power;
       data[7] = attention;
       data[8] = meditation;
+        data[9] = bpm;
+        data[10] = rmssd;
     }
   }
 

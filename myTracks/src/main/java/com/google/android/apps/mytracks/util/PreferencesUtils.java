@@ -56,6 +56,8 @@ public class PreferencesUtils {
   public static final boolean CHART_SHOW_CADENCE_DEFAULT = true;
   public static final boolean CHART_SHOW_ELEVATION_DEFAULT = true;
   public static final boolean CHART_SHOW_HEART_RATE_DEFAULT = true;
+  public static final boolean CHART_SHOW_BPM_DEFAULT = true;
+  public static final boolean CHART_SHOW_RMSSD_DEFAULT = true;
   public static final boolean CHART_SHOW_ATTENTION_DEFAULT = true;
   public static final boolean CHART_SHOW_MEDITATION_DEFAULT = true; 
   public static final boolean CHART_SHOW_PACER_DEFAULT = false; 

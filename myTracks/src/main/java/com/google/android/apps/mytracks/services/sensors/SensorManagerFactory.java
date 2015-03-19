@@ -17,6 +17,7 @@
 package com.google.android.apps.mytracks.services.sensors;
 
 import android.content.Context;
+import android.util.Log;
 
 import com.google.android.apps.mytracks.services.sensors.ant.AntSensorManager;
 import com.google.android.apps.mytracks.services.sensors.ble.BluetoothLeManager;
@@ -122,6 +123,7 @@ public class SensorManagerFactory {
       if (sendPageViews) {
         AnalyticsUtils.sendPageViews(context, AnalyticsUtils.SENSOR_POLAR);
       }
+
       return new PolarSensorManager(context); 
     } else if (sensorType.equals(context.getString(R.string.sensor_type_value_ble))) {
       if (sendPageViews) {
@@ -146,6 +148,8 @@ public class SensorManagerFactory {
       }
       return null; 
     }
+
+
     return null;
   }
 }
