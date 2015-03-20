@@ -35,9 +35,11 @@ import com.google.android.apps.mytracks.content.Sensor.SensorDataSet;
 import com.google.android.apps.mytracks.content.Sensor.SensorState;
 import com.google.android.apps.mytracks.services.sensors.SensorManager;
 import com.google.android.apps.mytracks.util.PreferencesUtils;
+import com.google.android.apps.mytracks.util.StdStats;
 
 import java.lang.reflect.Field;
 import java.util.Locale;
+import java.util.Vector;
 
 import br.com.bioscada.apps.mytracks.R;
 
@@ -81,6 +83,8 @@ public class AntSensorManager extends SensorManager {
 
   private boolean requestedReset = false;
 
+    private int lastHeartRate = 0;
+    private Vector<Float> rrVector = new Vector<Float>();
   private AntInterface.ServiceListener serviceListener = new AntInterface.ServiceListener() {
       @Override
     public void onServiceConnected() {
@@ -496,6 +500,9 @@ public class AntSensorManager extends SensorManager {
    */
   private void setSensorDataSet() {
     long now = System.currentTimeMillis();
+      int heartRate = 0;
+      int heartRateBPM = 0;
+      int heartRateRMSSD = 0;
     // Data comes in at ~4Hz rate from the sensors, so after >300 msec fresh
     // data is here from all the connected sensors
     if (now < lastSensorDataSetTime + 300) {
@@ -504,15 +511,27 @@ public class AntSensorManager extends SensorManager {
     lastSensorDataSetTime = now;
 
     SensorDataSet.Builder builder = Sensor.SensorDataSet.newBuilder();
-    int heartRate = antSensorValue.getHeartRate();
+     heartRate = antSensorValue.getHeartRate();
     if (heartRate != -1) {
       builder.setHeartRate(Sensor.SensorData.newBuilder()
           .setValue(heartRate).setState(Sensor.SensorState.SENDING));
     }
+      heartRateBPM = Math.round(60000/heartRate);
+      rrVector.add((float)lastHeartRate);
+      try{
+          heartRateRMSSD = Math.round(StdStats.calculeRMSSD(rrVector));
+      }catch (Exception e){
+          heartRateRMSSD = 0;
+      }
+      Sensor.SensorData.Builder rrbpm = Sensor.SensorData.newBuilder().setValue(heartRateBPM).setState(Sensor.SensorState.SENDING);
+      builder.setBPM(rrbpm);
+
+      Sensor.SensorData.Builder rrrmssd = Sensor.SensorData.newBuilder().setValue(heartRateRMSSD).setState(Sensor.SensorState.SENDING);
+      builder.setRMSSD(rrrmssd);
+
     int cadence = antSensorValue.getCadence();
     if (cadence != -1) {
-      builder.setCadence(Sensor.SensorData.newBuilder()
-          .setValue(cadence).setState(Sensor.SensorState.SENDING));
+      builder.setCadence(Sensor.SensorData.newBuilder().setValue(cadence).setState(Sensor.SensorState.SENDING));
     }
     sensorDataSet = builder.setCreationTime(now).build();
     setSensorState(SensorState.SENDING);

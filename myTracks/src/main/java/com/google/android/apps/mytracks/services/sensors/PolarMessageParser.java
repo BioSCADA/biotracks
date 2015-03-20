@@ -36,8 +36,7 @@ import java.util.Vector;
 public class PolarMessageParser implements MessageParser {
 
     private int lastHeartRate = 0;
-    private Vector rrVector = new Vector();
-
+    private Vector<Float> rrVector = new Vector<Float>();
     /**
      * Applies Polar packet validation rules to buffer. Polar packets are checked
      * for following; offset 0 = header byte, 254 (0xFE). offset 1 = packet length
@@ -115,13 +114,14 @@ public class PolarMessageParser implements MessageParser {
 
         lastHeartRate = heartRate; // Remember good value for next time.
         heartRateBPM = Math.round(60000/heartRate);
-        rrVector.add(heartRateBPM);
+        rrVector.add((float)lastHeartRate);
         try{
             heartRateRMSSD = Math.round(StdStats.calculeRMSSD(rrVector));
         }catch (Exception e){
+            Log.d("POLAR", "Exception = " + e.getMessage() );
             heartRateRMSSD = 0;
         }
-
+        Log.d("POLAR", "RMSSD = " + heartRateRMSSD );
         // Heart Rate
         Sensor.SensorDataSet.Builder sds = Sensor.SensorDataSet.newBuilder().setCreationTime( System.currentTimeMillis());
         Sensor.SensorData.Builder rr = Sensor.SensorData.newBuilder().setValue(heartRate).setState(Sensor.SensorState.SENDING);

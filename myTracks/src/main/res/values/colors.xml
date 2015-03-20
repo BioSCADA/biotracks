@@ -21,10 +21,14 @@ limitations under the License.
   <color name="chart_elevation_fill">#40B3CFB3</color> <!-- transparent green -->
   <color name="chart_heart_rate_border">#FFCC3300</color> <!-- red -->
   <color name="chart_heart_rate_fill">#40E88A70</color> <!-- transparent red -->
+    <color name="chart_heart_rate_bpm_border">#ffcc09c1</color> <!-- red -->
+    <color name="chart_heart_rate_bpm_fill">#40cd05e8</color> <!-- transparent red -->
+    <color name="chart_heart_rate_rmssd_border">#ff0025a7</color> <!-- red -->
+    <color name="chart_heart_rate_rmssd_fill">#400073e8</color> <!-- transparent red -->
    <color name="chart_attention_border">#FFFF8800</color> <!-- red -->
   <color name="chart_attention_fill">#40E88A70</color> <!-- transparent red -->
-   <color name="chart_meditation_border">#FF401465</color> <!-- red -->
-  <color name="chart_meditation_fill">#40401465</color> <!-- transparent red -->  
+   <color name="chart_meditation_border">#ff4ef7eb</color> <!-- red -->
+  <color name="chart_meditation_fill">#40006558</color> <!-- transparent red -->
   <color name="chart_pace_border">#FF0066FF</color> <!-- blue -->
   <color name="chart_pace_fill">#40C8E0FF</color> <!-- transparent blue -->
   <color name="chart_power_border">#FF401465</color> <!-- purple -->

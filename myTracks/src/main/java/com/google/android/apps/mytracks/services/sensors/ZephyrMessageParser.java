@@ -17,8 +17,10 @@ package com.google.android.apps.mytracks.services.sensors;
 
 import com.google.android.apps.mytracks.content.Sensor;
 import com.google.android.apps.mytracks.util.ApiAdapterFactory;
+import com.google.android.apps.mytracks.util.StdStats;
 
 import java.util.Arrays;
+import java.util.Vector;
 
 /**
  * An implementation of a Sensor MessageParser for Zephyr.
@@ -35,19 +37,41 @@ public class ZephyrMessageParser implements MessageParser {
   private static final byte[] CADENCE_BUG_FW_ID = {0x1A, 0x00, 0x31, 0x65, 0x50, 0x00, 0x31, 0x62};
   
   private StrideReadings strideReadings;
-  
-  @Override
+
+    private int lastHeartRate = 0;
+    private Vector<Float> rrVector = new Vector<Float>();
+
+    @Override
   public Sensor.SensorDataSet parseBuffer(byte[] buffer) {
+      int heartRate = 0;
+      int heartRateBPM = 0;
+      int heartRateRMSSD = 0;
+
+        heartRate =  buffer[12] & 0xFF;
+
     Sensor.SensorDataSet.Builder sds =
       Sensor.SensorDataSet.newBuilder()
       .setCreationTime(System.currentTimeMillis());
 
-    Sensor.SensorData.Builder heartrate = Sensor.SensorData.newBuilder()
+    Sensor.SensorData.Builder rr = Sensor.SensorData.newBuilder()
       .setValue(buffer[12] & 0xFF)
       .setState(Sensor.SensorState.SENDING);
-    sds.setHeartRate(heartrate);
-    
-    Sensor.SensorData.Builder batteryLevel = Sensor.SensorData.newBuilder()
+    sds.setHeartRate(rr);
+
+      heartRateBPM = Math.round(60000/heartRate);
+      rrVector.add((float)lastHeartRate);
+      try{
+          heartRateRMSSD = Math.round(StdStats.calculeRMSSD(rrVector));
+      }catch (Exception e){
+          heartRateRMSSD = 0;
+      }
+      Sensor.SensorData.Builder rrbpm = Sensor.SensorData.newBuilder().setValue(heartRateBPM).setState(Sensor.SensorState.SENDING);
+      sds.setBPM(rrbpm);
+
+      Sensor.SensorData.Builder rrrmssd = Sensor.SensorData.newBuilder().setValue(heartRateRMSSD).setState(Sensor.SensorState.SENDING);
+      sds.setRMSSD(rrrmssd);
+
+      Sensor.SensorData.Builder batteryLevel = Sensor.SensorData.newBuilder()
       .setValue(buffer[11])
       .setState(Sensor.SensorState.SENDING);
     sds.setBatteryLevel(batteryLevel);

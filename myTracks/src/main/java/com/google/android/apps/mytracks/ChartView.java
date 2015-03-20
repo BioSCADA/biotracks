@@ -59,7 +59,7 @@ public class ChartView extends View {
 
   public static final int Y_AXIS_INTERVALS = 5;
 
-  public static final int NUM_SERIES = 8;
+  public static final int NUM_SERIES = 10;
   public static final int ELEVATION_SERIES = 0;
   public static final int SPEED_SERIES = 1;
   public static final int PACE_SERIES = 2;
@@ -165,6 +165,22 @@ public class ChartView extends View {
         R.string.description_sensor_heart_rate,
         R.color.chart_heart_rate_fill,
         R.color.chart_heart_rate_border);
+      series[BPM_SERIES] = new ChartValueSeries(context,
+              0,
+              Integer.MAX_VALUE,
+              new int[] {25, 50 },
+              R.string.description_sensor_heart_rate_bpm,
+              R.string.description_sensor_heart_rate_bpm,
+              R.color.chart_heart_rate_bpm_fill,
+              R.color.chart_heart_rate_bpm_border);
+      series[RMSSD_SERIES] = new ChartValueSeries(context,
+              0,
+              Integer.MAX_VALUE,
+              new int[] {25, 50 },
+              R.string.description_sensor_heart_rate_rmssd,
+              R.string.description_sensor_heart_rate_rmssd,
+              R.color.chart_heart_rate_rmssd_fill,
+              R.color.chart_heart_rate_rmssd_border);
     series[ATTENTION_SERIES] = new ChartValueSeries(context,
         0,
         Integer.MAX_VALUE,

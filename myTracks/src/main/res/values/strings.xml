@@ -494,11 +494,11 @@ limitations under the License.
   </string>
     <string name="description_sensor_heart_rate_bpm"
         translation_description="Label for heart rate with its unit beats per minute (bpm).">
-    Heart rate BPM (bpm)
+    BPM (bpm)
   </string>
     <string name="description_sensor_heart_rate_rmssd"
         translation_description="Label for heart rate with its unit  (u).">
-    Heart rate RMSSD (u)
+    RMSSD (u)
   </string>
    <string name="description_sensor_attention"
     translation_description="Label for attention of neurosky.">

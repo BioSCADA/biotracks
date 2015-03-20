@@ -57,6 +57,8 @@ public class KmlTrackWriter implements TrackWriter {
   private static final String SCHEMA_ID = "schema";
   private static final String CADENCE = "cadence";
   private static final String HEART_RATE = "heart_rate";
+    private static final String BPM = "power";
+    private static final String RMSSD = "power";
   private static final String POWER = "power";
   private static final String ATTENTION = "attention";
   private static final String MEDITATION = "meditation";
@@ -84,6 +86,8 @@ public class KmlTrackWriter implements TrackWriter {
   private ArrayList<Integer> heartRateList = new ArrayList<Integer>();
   private ArrayList<Integer> attentionList = new ArrayList<Integer>();
   private ArrayList<Integer> meditationList = new ArrayList<Integer>();
+    private ArrayList<Integer> bpmList = new ArrayList<Integer>();
+    private ArrayList<Integer> rmssdList = new ArrayList<Integer>();
   private boolean hasPower;
   private boolean hasCadence;
   private boolean hasHeartRate;
@@ -149,6 +153,8 @@ public class KmlTrackWriter implements TrackWriter {
       writeSensorStyle(HEART_RATE, context.getString(R.string.description_sensor_heart_rate));
       writeSensorStyle(ATTENTION, context.getString(R.string.description_sensor_attention));
       writeSensorStyle(MEDITATION, context.getString(R.string.description_sensor_meditation));
+        writeSensorStyle(BPM, context.getString(R.string.description_sensor_heart_rate_bpm));
+        writeSensorStyle(RMSSD, context.getString(R.string.description_sensor_heart_rate_rmssd));
       printWriter.println("</Schema>");
     }
   }
@@ -273,6 +279,12 @@ public class KmlTrackWriter implements TrackWriter {
       if (hasHeartRate) {
         writeSensorData(heartRateList, HEART_RATE);
       }
+        if (hasBPM) {
+            writeSensorData(bpmList, BPM);
+        }
+        if (hasRMSSD) {
+            writeSensorData(rmssdList, RMSSD);
+        }
       printWriter.println("</SchemaData>");
       printWriter.println("</ExtendedData>");
       printWriter.println("</gx:Track>");
@@ -319,13 +331,13 @@ public class KmlTrackWriter implements TrackWriter {
             if (sensorDataSet.hasBPM()) {
                 SensorData sensorData = sensorDataSet.getBPM();
                 if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                    bpm =  sensorData.getValue() ;
+                    bpm =  sensorData.getValue();
                 }
             }
             if (sensorDataSet.hasRMSSD()) {
                 SensorData sensorData = sensorDataSet.getRMSSD();
                 if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                    rmssd =  sensorData.getValue() ;
+                    rmssd =  sensorData.getValue();
                 }
             }
           if (sensorDataSet.hasAttention()) {
@@ -348,6 +360,8 @@ public class KmlTrackWriter implements TrackWriter {
         heartRateList.add(heartRate);
         attentionList.add(attention);
         meditationList.add(meditation);
+          bpmList.add(bpm);
+          rmssdList.add(rmssd);
       }
     }
   }
