@@ -82,14 +82,16 @@ public class PolarMessageParser implements MessageParser {
         int iSize = SensorUtils.readUnsignedByte(buffer[1]);
         int iBat = SensorUtils.readUnsignedByte(buffer[5]);
         // Log.d( "POLAR", "iSize = " + iSize );
-        for (int i = 6; i < iSize; i = i + 2) // different number of RRI intervals
+        int u = 0;
+        for ( int i = 6; i < iSize; i = i + 2) // different number of RRI intervals
         {
             heartrateValid = packetValid(buffer, 0);
-            heartRate = SensorUtils.unsignedShortToInt(buffer, i);
-
-            Log.d("POLAR", "i = " + i + " RR = " + heartRate+ " iBat = " + iBat+ " iSize = " + iSize);
+            heartRate += SensorUtils.unsignedShortToInt(buffer, i);
+            u++;
+           // Log.d("POLAR", "i = " + i + " RR = " + heartRate+ " iBat = " + iBat+ " iSize = " + iSize);
 
         }
+        heartRate = Math.round(heartRate/u);
        // heartRate = SensorUtils.unsignedShortToInt(buffer, 6);
 
 
@@ -121,7 +123,7 @@ public class PolarMessageParser implements MessageParser {
             Log.d("POLAR", "Exception = " + e.getMessage() );
             heartRateRMSSD = 0;
         }
-        Log.d("POLAR", "RMSSD = " + heartRateRMSSD );
+        Log.d("POLAR", " RR " + heartRate +" BPM " + heartRateBPM+" RMSSD " + heartRateRMSSD);
         // Heart Rate
         Sensor.SensorDataSet.Builder sds = Sensor.SensorDataSet.newBuilder().setCreationTime( System.currentTimeMillis());
         Sensor.SensorData.Builder rr = Sensor.SensorData.newBuilder().setValue(heartRate).setState(Sensor.SensorState.SENDING);
