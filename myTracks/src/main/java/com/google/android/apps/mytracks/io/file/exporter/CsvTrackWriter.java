@@ -130,7 +130,7 @@ public class CsvTrackWriter implements TrackWriter {
     public void writeWaypoint(Waypoint waypoint) {
         Location location = waypoint.getLocation();
         writeCommaSeparatedLine(waypoint.getName(), waypoint.getCategory(), waypoint.getDescription(),
-                Integer.toString(location.getLatitude()), Integer.toString(location.getLongitude()),
+                Double.toString(location.getLatitude()), Double.toString(location.getLongitude()),
                 getAltitude(location), getBearing(location), getAccuracy(location), getSpeed(location),
                 StringUtils.formatDateTimeIso8601(location.getTime()));
     }
@@ -297,8 +297,8 @@ public class CsvTrackWriter implements TrackWriter {
             writeCommaSeparatedLine(
                     Integer.toString(segmentIndex),
                     Integer.toString(pointIndex),
-                    Integer.toString(location.getLatitude()),
-                    Integer.toString(location.getLongitude()),
+                    Double.toString(location.getLatitude()),
+                    Double.toString(location.getLongitude()),
                     getAltitude(location),
                     getBearing(location),
                     getAccuracy(location),
@@ -317,8 +317,8 @@ public class CsvTrackWriter implements TrackWriter {
             writeCommaSeparatedLine(
                     Integer.toString(segmentIndex),
                     Integer.toString(pointIndex),
-                    Integer.toString(location.getLatitude()),
-                    Integer.toString(location.getLongitude()),
+                    Double.toString(location.getLatitude()),
+                    Double.toString(location.getLongitude()),
                     getAltitude(location),
                     getBearing(location),
                     getAccuracy(location),
@@ -336,11 +336,11 @@ public class CsvTrackWriter implements TrackWriter {
     }
 
     private String getAltitude(Location location) {
-        return location.hasAltitude() ? Integer.toString(location.getAltitude()) : null;
+        return location.hasAltitude() ? Double.toString(location.getAltitude()) : null;
     }
 
     private String getBearing(Location location) {
-        return location.hasBearing() ? Integer.toString(location.getBearing()) : null;
+        return location.hasBearing() ? Double.toString(location.getBearing()) : null;
     }
 
     private String getAccuracy(Location location) {
