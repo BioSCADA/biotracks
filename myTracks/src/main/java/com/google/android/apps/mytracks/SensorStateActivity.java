@@ -195,9 +195,9 @@ public class SensorStateActivity extends AbstractMyTracksActivity {
     String heartRate = sensorDataSet == null ? getString(R.string.value_unknown)
         : getHeartRate(sensorDataSet);
       String BPM = sensorDataSet == null ? getString(R.string.value_unknown)
-              : getBPM(sensorDataSet);
+              : getBpm(sensorDataSet);
       String RMSSD = sensorDataSet == null ? getString(R.string.value_unknown)
-              : getRMSSD(sensorDataSet);
+              : getRmssd(sensorDataSet);
     String cadence = sensorDataSet == null ? getString(R.string.value_unknown)
         : getCadence(sensorDataSet);
     String power = sensorDataSet == null ? getString(R.string.value_unknown)
@@ -247,28 +247,28 @@ public class SensorStateActivity extends AbstractMyTracksActivity {
     }
     return value;
   }
-    private String getBPM(Sensor.SensorDataSet sensorDataSet) {
+    private String getBpm(Sensor.SensorDataSet sensorDataSet) {
         String value;
-        if (sensorDataSet.hasBPM() && sensorDataSet.getBPM().hasValue()
-                && sensorDataSet.getBPM().getState() == Sensor.SensorState.SENDING) {
+        if (sensorDataSet.hasBpm() && sensorDataSet.getBpm().hasValue()
+                && sensorDataSet.getBpm().getState() == Sensor.SensorState.SENDING) {
             value = getString(
-                    R.string.sensor_state_heart_rate_bpm_value, sensorDataSet.getBPM().getValue());
+                    R.string.sensor_state_heart_rate_bpm_value, sensorDataSet.getBpm().getValue());
         } else {
             value = SensorUtils.getStateAsString(
-                    sensorDataSet.hasBPM() ? sensorDataSet.getBPM().getState()
+                    sensorDataSet.hasBpm() ? sensorDataSet.getBpm().getState()
                             : Sensor.SensorState.NONE, this);
         }
         return value;
     }
-    private String getRMSSD(Sensor.SensorDataSet sensorDataSet) {
+    private String getRmssd(Sensor.SensorDataSet sensorDataSet) {
         String value;
-        if (sensorDataSet.hasRMSSD() && sensorDataSet.getRMSSD().hasValue()
-                && sensorDataSet.getRMSSD().getState() == Sensor.SensorState.SENDING) {
+        if (sensorDataSet.hasRmssd() && sensorDataSet.getRmssd().hasValue()
+                && sensorDataSet.getRmssd().getState() == Sensor.SensorState.SENDING) {
             value = getString(
-                    R.string.sensor_state_heart_rate_rmssd_value, sensorDataSet.getRMSSD().getValue());
+                    R.string.sensor_state_heart_rate_rmssd_value, sensorDataSet.getRmssd().getValue());
         } else {
             value = SensorUtils.getStateAsString(
-                    sensorDataSet.hasRMSSD() ? sensorDataSet.getRMSSD().getState()
+                    sensorDataSet.hasRmssd() ? sensorDataSet.getRmssd().getState()
                             : Sensor.SensorState.NONE, this);
         }
         return value;

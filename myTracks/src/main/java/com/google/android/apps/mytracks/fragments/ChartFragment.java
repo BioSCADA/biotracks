@@ -515,15 +515,15 @@ public class ChartFragment extends Fragment implements TrackDataListener {
           && sensorDataSet.getHeartRate().hasValue()) {
         heartRate = sensorDataSet.getHeartRate().getValue();
       }
-        if (sensorDataSet.hasBPM()
-                && sensorDataSet.getBPM().getState() == Sensor.SensorState.SENDING
-                && sensorDataSet.getBPM().hasValue()) {
-            bpm = sensorDataSet.getBPM().getValue();
+        if (sensorDataSet.hasBpm()
+                && sensorDataSet.getBpm().getState() == Sensor.SensorState.SENDING
+                && sensorDataSet.getBpm().hasValue()) {
+            bpm = sensorDataSet.getBpm().getValue();
         }
-        if (sensorDataSet.hasRMSSD()
-                && sensorDataSet.getRMSSD().getState() == Sensor.SensorState.SENDING
-                && sensorDataSet.getRMSSD().hasValue()) {
-            rmssd = sensorDataSet.getRMSSD().getValue();
+        if (sensorDataSet.hasRmssd()
+                && sensorDataSet.getRmssd().getState() == Sensor.SensorState.SENDING
+                && sensorDataSet.getRmssd().hasValue()) {
+            rmssd = sensorDataSet.getRmssd().getValue();
         }
       if (sensorDataSet.hasAttention()
           && sensorDataSet.getAttention().getState() == Sensor.SensorState.SENDING

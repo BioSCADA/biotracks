@@ -114,10 +114,10 @@ public class HrmSensor extends BluetoothLeSensor {
       sds.setHeartRate(rr);
 
       Sensor.SensorData.Builder rrbpm = Sensor.SensorData.newBuilder().setValue(heartRateBPM).setState(Sensor.SensorState.SENDING);
-      sds.setBPM(rrbpm);
+      sds.setBpm(rrbpm);
 
       Sensor.SensorData.Builder rrrmssd = Sensor.SensorData.newBuilder().setValue(heartRateRMSSD).setState(Sensor.SensorState.SENDING);
-      sds.setRMSSD(rrrmssd);
+      sds.setRmssd(rrrmssd);
       return sds.build();
   }
 }

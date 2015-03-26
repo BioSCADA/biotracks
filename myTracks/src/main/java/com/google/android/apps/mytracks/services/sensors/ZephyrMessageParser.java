@@ -66,10 +66,10 @@ public class ZephyrMessageParser implements MessageParser {
           heartRateRMSSD = 0;
       }
       Sensor.SensorData.Builder rrbpm = Sensor.SensorData.newBuilder().setValue(heartRateBPM).setState(Sensor.SensorState.SENDING);
-      sds.setBPM(rrbpm);
+      sds.setBpm(rrbpm);
 
       Sensor.SensorData.Builder rrrmssd = Sensor.SensorData.newBuilder().setValue(heartRateRMSSD).setState(Sensor.SensorState.SENDING);
-      sds.setRMSSD(rrrmssd);
+      sds.setRmssd(rrrmssd);
 
       Sensor.SensorData.Builder batteryLevel = Sensor.SensorData.newBuilder()
       .setValue(buffer[11])

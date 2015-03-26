@@ -524,10 +524,10 @@ public class AntSensorManager extends SensorManager {
           heartRateRMSSD = 0;
       }
       Sensor.SensorData.Builder rrbpm = Sensor.SensorData.newBuilder().setValue(heartRateBPM).setState(Sensor.SensorState.SENDING);
-      builder.setBPM(rrbpm);
+      builder.setBpm(rrbpm);
 
       Sensor.SensorData.Builder rrrmssd = Sensor.SensorData.newBuilder().setValue(heartRateRMSSD).setState(Sensor.SensorState.SENDING);
-      builder.setRMSSD(rrrmssd);
+      builder.setRmssd(rrrmssd);
 
     int cadence = antSensorValue.getCadence();
     if (cadence != -1) {

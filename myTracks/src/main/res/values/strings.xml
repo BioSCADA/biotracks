@@ -498,7 +498,7 @@ limitations under the License.
   </string>
     <string name="description_sensor_heart_rate_rmssd"
         translation_description="Label for heart rate with its unit  (u).">
-    RMSSD (u)
+    RMSSD (ms)
   </string>
    <string name="description_sensor_attention"
     translation_description="Label for attention of neurosky.">

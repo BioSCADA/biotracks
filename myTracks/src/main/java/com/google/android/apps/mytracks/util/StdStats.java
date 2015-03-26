@@ -273,18 +273,22 @@ public class StdStats {
     }
 
     public static float calculeRMSSD(Vector<Float> rr){
-        float[] adjacent = new float[rr.size()-1];
-        float[] adjacentPow2 = new float[adjacent.length];
+        if(rr.size() > 2){
+            float[] adjacent = new float[rr.size()-1];
+            float[] adjacentPow2 = new float[adjacent.length];
 
-        for(int t=0; t < rr.size()-1; t++){
-            adjacent[t] = rr.get(t) - rr.get(t+1);
-            adjacentPow2[t] = (float) Math.pow(adjacent[t],2);
+            for(int t=0; t < rr.size()-1; t++){
+                adjacent[t] = rr.get(t) - rr.get(t+1);
+                adjacentPow2[t] = (float) Math.pow(adjacent[t],2);
+            }
+            float adj = 0;
+            for(int t = 0; t < adjacentPow2.length; t++){
+                adj += adjacentPow2[t];
+            }
+            return (float) Math.sqrt(adj/adjacentPow2.length);
+        }else{
+            return 0;
         }
-        float adj = 0;
-        for(int t = 0; t < adjacentPow2.length; t++){
-            adj += adjacentPow2[t];
-        }
-        return (float) Math.sqrt(adj/adjacentPow2.length);
     }
 
     /*

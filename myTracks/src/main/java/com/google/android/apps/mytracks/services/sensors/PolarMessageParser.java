@@ -66,75 +66,76 @@ public class PolarMessageParser implements MessageParser {
 
 
         int heartRate = 0;
+        int heartRateRC1 = 0;
+        int heartRateRC2 = 0;
         int heartRateBPM = 0;
         int heartRateRMSSD = 0;
-        boolean heartrateValid = false;
-        heartrateValid = packetValid(buffer, 0);
-        // Minimum length Polar packets is 8, so stop search 8 bytes before buffer
-        // ends.
-        // Log.d( "POLAR", "buffer.length = " + buffer.length );
-    /*
-     * for (int i = 0; i < buffer.length - 8; i++) { heartrateValid =
-     * packetValid(buffer,i); if (heartrateValid) { heartRate +=
-     * unsignedShortToInt(buffer,6) ; Log.d( "POLAR", "i = " + i + " RR = " +
-     * heartRate ); break; } }
-     */
+
         int iSize = SensorUtils.readUnsignedByte(buffer[1]);
         int iBat = SensorUtils.readUnsignedByte(buffer[5]);
-        // Log.d( "POLAR", "iSize = " + iSize );
-        int u = 0;
+
         for ( int i = 6; i < iSize; i = i + 2) // different number of RRI intervals
         {
-            heartrateValid = packetValid(buffer, 0);
-            heartRate += SensorUtils.unsignedShortToInt(buffer, i);
-            u++;
-           // Log.d("POLAR", "i = " + i + " RR = " + heartRate+ " iBat = " + iBat+ " iSize = " + iSize);
+            int crr = 0;
+
+            if (packetValid(buffer, 0)){
+                crr = SensorUtils.unsignedShortToInt(buffer, i);
+            }else{
+                crr = (int) (lastHeartRate);
+            }
+            if (crr < 300){
+                Log.d("POLAR", "INVALID < 300 | " + heartRate );
+                return null;
+            }
+            if (crr > 2000){
+                Log.d("POLAR", "INVALID > 2000 | " + crr );
+                return null;
+            }
+            rrVector.add((float)crr);
+
+            if(i==6) {
+                heartRate = crr;
+                heartRateBPM = Math.round(60000/crr);
+            }
+            if(i==8) {
+                heartRateRC1 = crr;
+            }
+            if(i==10) {
+                heartRateRC2 = crr;
+            }
+            lastHeartRate = crr; // Remember good value for next time.
+
+            Log.d("POLAR", "i = " + i + " RR = " + crr+ " iBat = " + iBat+ " iSize = " + iSize);
 
         }
-        heartRate = Math.round(heartRate/u);
-       // heartRate = SensorUtils.unsignedShortToInt(buffer, 6);
 
+        heartRateRMSSD = Math.round(StdStats.calculeRMSSD(rrVector));
 
-        // If our buffer is corrupted, use decaying last good value.
-        if (!heartrateValid){
-            heartRate = (int) (lastHeartRate);
-            Log.d("POLAR", "INVALID = " + heartRate );
-            return null;
-        }
-        if (heartRate < 300){
-            heartRate = (int) (lastHeartRate);
-            Log.d("POLAR", "INVALID < 300= " + heartRate );
-            return null;
-        }
-        if (heartRate > 2000){
-            heartRate = (int) (lastHeartRate);
-            Log.d("POLAR", "INVALID > 2000= " + heartRate );
-            return null;
-        }
-
-
-
-        lastHeartRate = heartRate; // Remember good value for next time.
-        heartRateBPM = Math.round(60000/heartRate);
-        rrVector.add((float)lastHeartRate);
-        try{
-            heartRateRMSSD = Math.round(StdStats.calculeRMSSD(rrVector));
-        }catch (Exception e){
-            Log.d("POLAR", "Exception = " + e.getMessage() );
-            heartRateRMSSD = 0;
-        }
-        Log.d("POLAR", " RR " + heartRate +" BPM " + heartRateBPM+" RMSSD " + heartRateRMSSD);
+        // Log.d("POLAR", " RR " + heartRate +" BPM " + heartRateBPM+" RMSSD " + heartRateRMSSD);
         // Heart Rate
         Sensor.SensorDataSet.Builder sds = Sensor.SensorDataSet.newBuilder().setCreationTime( System.currentTimeMillis());
-        Sensor.SensorData.Builder rr = Sensor.SensorData.newBuilder().setValue(heartRate).setState(Sensor.SensorState.SENDING);
-        sds.setHeartRate(rr);
 
-        Sensor.SensorData.Builder rrbpm = Sensor.SensorData.newBuilder().setValue(heartRateBPM).setState(Sensor.SensorState.SENDING);
-        sds.setBPM(rrbpm);
+        if(heartRate > 0){
+            Sensor.SensorData.Builder rr = Sensor.SensorData.newBuilder().setValue(heartRate).setState(Sensor.SensorState.SENDING);
+            sds.setHeartRate(rr);
+        }
 
-        Sensor.SensorData.Builder rrrmssd = Sensor.SensorData.newBuilder().setValue(heartRateRMSSD).setState(Sensor.SensorState.SENDING);
-        sds.setRMSSD(rrrmssd);
-
+        if(heartRateRC1 > 0){
+            Sensor.SensorData.Builder rrrc1 = Sensor.SensorData.newBuilder().setValue(heartRateRC1).setState(Sensor.SensorState.SENDING);
+            sds.setHeartRateRc1(rrrc1);
+        }
+        if(heartRateRC2 > 0){
+            Sensor.SensorData.Builder rrrc2 = Sensor.SensorData.newBuilder().setValue(heartRateRC2).setState(Sensor.SensorState.SENDING);
+            sds.setHeartRateRc2(rrrc2);
+        }
+        if(heartRateBPM > 0){
+            Sensor.SensorData.Builder rrbpm = Sensor.SensorData.newBuilder().setValue(heartRateBPM).setState(Sensor.SensorState.SENDING);
+            sds.setBpm(rrbpm);
+        }
+        if(heartRateRMSSD > 0){
+            Sensor.SensorData.Builder rrrmssd = Sensor.SensorData.newBuilder().setValue(heartRateRMSSD).setState(Sensor.SensorState.SENDING);
+            sds.setRmssd(rrrmssd);
+        }
         Sensor.SensorData.Builder batteryLevel = Sensor.SensorData.newBuilder().setValue(iBat).setState(Sensor.SensorState.SENDING);
         sds.setBatteryLevel(batteryLevel);
 

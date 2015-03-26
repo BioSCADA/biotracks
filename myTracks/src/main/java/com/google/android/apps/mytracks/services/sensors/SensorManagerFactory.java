@@ -123,7 +123,6 @@ public class SensorManagerFactory {
       if (sendPageViews) {
         AnalyticsUtils.sendPageViews(context, AnalyticsUtils.SENSOR_POLAR);
       }
-
       return new PolarSensorManager(context); 
     } else if (sensorType.equals(context.getString(R.string.sensor_type_value_ble))) {
       if (sendPageViews) {

@@ -57,8 +57,8 @@ public class KmlTrackWriter implements TrackWriter {
   private static final String SCHEMA_ID = "schema";
   private static final String CADENCE = "cadence";
   private static final String HEART_RATE = "heart_rate";
-    private static final String BPM = "power";
-    private static final String RMSSD = "power";
+    private static final String BPM = "BPM";
+    private static final String RMSSD = "RMSSD";
   private static final String POWER = "power";
   private static final String ATTENTION = "attention";
   private static final String MEDITATION = "meditation";
@@ -93,8 +93,8 @@ public class KmlTrackWriter implements TrackWriter {
   private boolean hasHeartRate;
   private boolean hasAttention;
   private boolean hasMeditation;
-    private boolean hasBPM;
-    private boolean hasRMSSD;
+    private boolean hasBpm;
+    private boolean hasRmssd;
   public KmlTrackWriter(Context context, boolean multiple, boolean playTrack) {
     this(context, multiple, playTrack, new DescriptionGeneratorImpl(context));
   }
@@ -257,8 +257,8 @@ public class KmlTrackWriter implements TrackWriter {
       hasPower = false;
       hasCadence = false;
       hasHeartRate = false;
-        hasBPM = false;
-        hasRMSSD = false;
+        hasBpm = false;
+        hasRmssd = false;
       powerList.clear();
       cadenceList.clear();
       heartRateList.clear();
@@ -279,10 +279,10 @@ public class KmlTrackWriter implements TrackWriter {
       if (hasHeartRate) {
         writeSensorData(heartRateList, HEART_RATE);
       }
-        if (hasBPM) {
+        if (hasBpm) {
             writeSensorData(bpmList, BPM);
         }
-        if (hasRMSSD) {
+        if (hasRmssd) {
             writeSensorData(rmssdList, RMSSD);
         }
       printWriter.println("</SchemaData>");
@@ -328,14 +328,14 @@ public class KmlTrackWriter implements TrackWriter {
               heartRate = sensorData.getValue();
             }
           }
-            if (sensorDataSet.hasBPM()) {
-                SensorData sensorData = sensorDataSet.getBPM();
+            if (sensorDataSet.hasBpm()) {
+                SensorData sensorData = sensorDataSet.getBpm();
                 if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
                     bpm =  sensorData.getValue();
                 }
             }
-            if (sensorDataSet.hasRMSSD()) {
-                SensorData sensorData = sensorDataSet.getRMSSD();
+            if (sensorDataSet.hasRmssd()) {
+                SensorData sensorData = sensorDataSet.getRmssd();
                 if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
                     rmssd =  sensorData.getValue();
                 }

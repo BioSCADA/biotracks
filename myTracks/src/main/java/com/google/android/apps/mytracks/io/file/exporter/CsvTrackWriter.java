@@ -25,6 +25,7 @@ import com.google.android.apps.mytracks.content.Sensor.SensorDataSet;
 import com.google.android.apps.mytracks.content.Track;
 import com.google.android.apps.mytracks.content.Waypoint;
 import com.google.android.apps.mytracks.io.file.TrackFileFormat;
+import com.google.android.apps.mytracks.stats.DoubleBuffer;
 import com.google.android.apps.mytracks.util.StringUtils;
 
 import java.io.OutputStream;
@@ -63,7 +64,9 @@ public class CsvTrackWriter implements TrackWriter {
     private PrintWriter printWriter;
     private int segmentIndex;
     private int pointIndex;
-    private int lastHeartRate = 0;
+    private String l_heartRate = "";
+    private String l_heartRateRC1 = "";
+    private String l_heartRateRC2 = "";
 
     public CsvTrackWriter(Context context) {
         this.context = context;
@@ -127,7 +130,7 @@ public class CsvTrackWriter implements TrackWriter {
     public void writeWaypoint(Waypoint waypoint) {
         Location location = waypoint.getLocation();
         writeCommaSeparatedLine(waypoint.getName(), waypoint.getCategory(), waypoint.getDescription(),
-                Double.toString(location.getLatitude()), Double.toString(location.getLongitude()),
+                Integer.toString(location.getLatitude()), Integer.toString(location.getLongitude()),
                 getAltitude(location), getBearing(location), getAccuracy(location), getSpeed(location),
                 StringUtils.formatDateTimeIso8601(location.getTime()));
     }
@@ -180,13 +183,15 @@ public class CsvTrackWriter implements TrackWriter {
 
     @Override
     public void writeLocation(Location location) {
-        String power = null;
-        String cadence = null;
-        String heartRate = null;
-        String bpm = null;
-        String rmssd = null;
-        String attention = null;
-        String meditation = null;
+        String power = "";
+        String cadence = "";
+        String heartRate = "";
+        String heartRateRC1 = "";
+        String heartRateRC2 = "";
+        String bpm = "";
+        String rmssd = "";
+        String attention = "";
+        String meditation = "";
         if (location instanceof MyTracksLocation) {
             SensorDataSet sensorDataSet = ((MyTracksLocation) location).getSensorDataSet();
 
@@ -194,49 +199,76 @@ public class CsvTrackWriter implements TrackWriter {
                 if (sensorDataSet.hasPower()) {
                     SensorData sensorData = sensorDataSet.getPower();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        power = Double.toString(sensorData.getValue());
+                        power = Integer.toString(sensorData.getValue());
                     }
                 }
                 if (sensorDataSet.hasCadence()) {
                     SensorData sensorData = sensorDataSet.getCadence();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        cadence = Double.toString(sensorData.getValue());
+                        cadence = Integer.toString(sensorData.getValue());
                     }
                 }
                 if (sensorDataSet.hasHeartRate()) {
                     SensorData sensorData = sensorDataSet.getHeartRate();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        heartRate = Double.toString(sensorData.getValue());
-                        if (sensorData.getValue() == lastHeartRate) {
+                        if( !heartRate.equals(l_heartRate)  ){
+                            heartRate = Integer.toString(sensorData.getValue());
+                            l_heartRate = heartRate;
+                        }else{
                             heartRate = "";
-                        } else {
-                            heartRate = Double.toString(sensorData.getValue());
                         }
-                        lastHeartRate = sensorData.getValue();
+
+
                     }
                 }
-                if (sensorDataSet.hasBPM()) {
-                    SensorData sensorData = sensorDataSet.getBPM();
+                if (sensorDataSet.hasHeartRateRc1()) {
+                    SensorData sensorData = sensorDataSet.getHeartRateRc1();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        bpm = Double.toString(sensorData.getValue());
+                        heartRateRC1 = Integer.toString(sensorData.getValue());
+                        if(!heartRateRC1.equals(l_heartRateRC1)){
+                            l_heartRateRC1 = heartRateRC1;
+                        }else{
+                            heartRateRC1 = "";
+                        }
+
+
                     }
                 }
-                if (sensorDataSet.hasRMSSD()) {
-                    SensorData sensorData = sensorDataSet.getRMSSD();
+                if (sensorDataSet.hasHeartRateRc2()) {
+                    SensorData sensorData = sensorDataSet.getHeartRateRc2();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        rmssd = Double.toString(sensorData.getValue());
+                        if(!heartRateRC2.equals(l_heartRateRC2)){
+                            heartRateRC2 = Integer.toString(sensorData.getValue());
+                            l_heartRateRC2 = heartRateRC2;
+                        }else{
+                            heartRateRC2 = "";
+                        }
+
+
+                    }
+                }
+                if (sensorDataSet.hasBpm()) {
+                    SensorData sensorData = sensorDataSet.getBpm();
+                    if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                        bpm = Integer.toString(sensorData.getValue());
+                    }
+                }
+                if (sensorDataSet.hasRmssd()) {
+                    SensorData sensorData = sensorDataSet.getRmssd();
+                    if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                        rmssd = Integer.toString(sensorData.getValue());
                     }
                 }
                 if (sensorDataSet.hasAttention()) {
                     SensorData sensorData = sensorDataSet.getAttention();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        attention = Double.toString(sensorData.getValue());
+                        attention = Integer.toString(sensorData.getValue());
                     }
                 }
                 if (sensorDataSet.hasMeditation()) {
                     SensorData sensorData = sensorDataSet.getMeditation();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        meditation = Double.toString(sensorData.getValue());
+                        meditation = Integer.toString(sensorData.getValue());
                     }
                 }
             }
@@ -247,8 +279,10 @@ public class CsvTrackWriter implements TrackWriter {
                 Integer.toString(pointIndex),
                 Double.toString(location.getLatitude()),
                 Double.toString(location.getLongitude()),
-                getAltitude(location), getBearing(location),
-                getAccuracy(location), getSpeed(location),
+                getAltitude(location),
+                getBearing(location),
+                getAccuracy(location),
+                getSpeed(location),
                 StringUtils.formatDateTimeIso8601(location.getTime()),
                 power,
                 cadence,
@@ -257,14 +291,56 @@ public class CsvTrackWriter implements TrackWriter {
                 rmssd,
                 attention,
                 meditation);
+
+        if(heartRateRC1 !=  l_heartRateRC1){
+
+            writeCommaSeparatedLine(
+                    Integer.toString(segmentIndex),
+                    Integer.toString(pointIndex),
+                    Integer.toString(location.getLatitude()),
+                    Integer.toString(location.getLongitude()),
+                    getAltitude(location),
+                    getBearing(location),
+                    getAccuracy(location),
+                    getSpeed(location),
+                    StringUtils.formatDateTimeIso8601(location.getTime()),
+                    power,
+                    cadence,
+                    heartRateRC1,
+                    bpm,
+                    rmssd,
+                    attention,
+                    meditation);
+        }
+        if(heartRateRC2 !=  l_heartRateRC2){
+
+            writeCommaSeparatedLine(
+                    Integer.toString(segmentIndex),
+                    Integer.toString(pointIndex),
+                    Integer.toString(location.getLatitude()),
+                    Integer.toString(location.getLongitude()),
+                    getAltitude(location),
+                    getBearing(location),
+                    getAccuracy(location),
+                    getSpeed(location),
+                    StringUtils.formatDateTimeIso8601(location.getTime()),
+                    power,
+                    cadence,
+                    heartRateRC2,
+                    bpm,
+                    rmssd,
+                    attention,
+                    meditation);
+        }
+
     }
 
     private String getAltitude(Location location) {
-        return location.hasAltitude() ? Double.toString(location.getAltitude()) : null;
+        return location.hasAltitude() ? Integer.toString(location.getAltitude()) : null;
     }
 
     private String getBearing(Location location) {
-        return location.hasBearing() ? Double.toString(location.getBearing()) : null;
+        return location.hasBearing() ? Integer.toString(location.getBearing()) : null;
     }
 
     private String getAccuracy(Location location) {
