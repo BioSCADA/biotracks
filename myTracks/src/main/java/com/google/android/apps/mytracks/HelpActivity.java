@@ -117,8 +117,7 @@ public class HelpActivity extends AbstractMyTracksActivity implements EulaCaller
         return true;
       case R.id.help_forum:
         intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse(
-            "http://groups.google.com/a/googleproductforums.com/forum/#!categories/maps/mytracks/"));
+        intent.setData(Uri.parse( "https://bioscada.me"));
         startActivity(intent);
         return true;
       default:

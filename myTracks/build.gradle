@@ -6,7 +6,9 @@ android {
     defaultConfig {
         applicationId "br.com.bioscada.apps.mytracks"
         minSdkVersion 10
-        targetSdkVersion 15
+        targetSdkVersion 22
+        versionCode 1
+        versionName '1.0'
     }
     buildTypes {
         release {
@@ -19,7 +21,6 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile project(':myTracksLib')
-
 }

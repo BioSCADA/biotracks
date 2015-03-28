@@ -18,7 +18,9 @@ limitations under the License.
   android:layout_height="match_parent"
   android:layout_width="match_parent"
   android:orientation="vertical" >
-  <ScrollView style="@style/ScrollView.WithBottomButtons" >
+  <ScrollView style="@style/ScrollView.WithBottomButtons"
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
     <WebView
       android:id="@+id/help_webview"
       android:layout_height="wrap_content"

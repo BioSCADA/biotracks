@@ -572,7 +572,7 @@ limitations under the License.
   <string name="eula_copyright_year"
     translation_description="The copyright year in the 'Terms of Service'. See
       http://m.google.com/toscountry. \u00A9 is the unicode value for the copyright symbol.">
-    \u00A92014
+    BioSCADA \u00A9 2015
   </string>
   <string name="eula_date"
     translation_description="The date in the 'Terms of Service'. See
