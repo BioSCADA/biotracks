@@ -29,7 +29,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities to display a list item.

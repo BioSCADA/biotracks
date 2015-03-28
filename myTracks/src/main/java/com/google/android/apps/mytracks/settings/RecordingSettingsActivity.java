@@ -27,7 +27,7 @@ import com.google.android.apps.mytracks.util.PreferencesUtils;
 import com.google.android.apps.mytracks.util.StringUtils;
 import com.google.android.apps.mytracks.util.UnitConversions;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An activity for accessing recording settings.

@@ -25,7 +25,7 @@ import android.os.RemoteException;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.TrackEditActivity;
+import br.com.bioscada.apps.biotracks.TrackEditActivity;
 import com.google.android.apps.mytracks.content.WaypointCreationRequest;
 import com.google.android.apps.mytracks.services.ITrackRecordingService;
 import com.google.android.apps.mytracks.services.TrackRecordingService;
@@ -33,7 +33,7 @@ import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection
 
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities for {@link TrackRecordingServiceConnection}.

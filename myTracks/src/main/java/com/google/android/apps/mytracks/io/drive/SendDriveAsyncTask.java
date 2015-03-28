@@ -36,7 +36,7 @@ import com.google.api.services.drive.model.PermissionList;
 
 import java.io.IOException;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * AsyncTask to send a track to Google Drive.

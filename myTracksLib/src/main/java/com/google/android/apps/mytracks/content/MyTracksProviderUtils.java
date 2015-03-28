@@ -38,7 +38,7 @@ public interface MyTracksProviderUtils {
    * The authority (the first part of the URI) for the My Tracks content
    * provider.
    */
-  public static final String AUTHORITY = "br.com.bioscada.apps.mytracks";
+  public static final String AUTHORITY = "br.com.bioscada.apps.biotracks";
 
   /**
    * Clears a track. Removes waypoints and trackpoints. Only keeps the track id.

@@ -26,10 +26,10 @@ import android.content.DialogInterface.OnClickListener;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
-import com.google.android.apps.mytracks.Constants;
+import br.com.bioscada.apps.biotracks.Constants;
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A DialogFragment to choose an account.

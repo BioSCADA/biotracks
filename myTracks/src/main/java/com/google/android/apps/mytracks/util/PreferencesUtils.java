@@ -23,12 +23,12 @@ import android.content.SharedPreferences.Editor;
 import android.text.TextUtils;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.Constants;
+import br.com.bioscada.apps.biotracks.Constants;
 import com.google.android.apps.mytracks.fragments.ExportDialogFragment.ExportType;
 import com.google.android.apps.mytracks.io.file.TrackFileFormat;
 import com.google.android.gms.location.DetectedActivity;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities to access preferences stored in {@link SharedPreferences}.

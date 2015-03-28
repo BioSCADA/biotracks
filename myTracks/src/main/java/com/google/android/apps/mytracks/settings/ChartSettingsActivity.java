@@ -22,7 +22,7 @@ import android.preference.ListPreference;
 
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An activity for accessing chart settings.

@@ -35,7 +35,7 @@ import com.google.common.annotations.VisibleForTesting;
 import java.util.HashMap;
 import java.util.Locale;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * This class will periodically announce the user's trip statistics.

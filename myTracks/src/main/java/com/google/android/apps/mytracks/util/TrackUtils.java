@@ -23,7 +23,7 @@ import com.google.android.apps.mytracks.content.Track;
 import com.google.android.apps.mytracks.content.TracksColumns;
 import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities for updating track.

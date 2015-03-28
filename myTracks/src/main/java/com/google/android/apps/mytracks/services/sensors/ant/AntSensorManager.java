@@ -41,7 +41,7 @@ import java.lang.reflect.Field;
 import java.util.Locale;
 import java.util.Vector;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Ant Sensor Manager.

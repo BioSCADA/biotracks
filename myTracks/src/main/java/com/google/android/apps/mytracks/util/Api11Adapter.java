@@ -32,13 +32,13 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.TabWidget;
 
-import com.google.android.apps.mytracks.ContextualActionModeCallback;
-import com.google.android.apps.mytracks.TrackController;
+import br.com.bioscada.apps.biotracks.ContextualActionModeCallback;
+import br.com.bioscada.apps.biotracks.TrackController;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * API level 11 specific implementation of the {@link ApiAdapter}.

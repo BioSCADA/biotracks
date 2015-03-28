@@ -28,7 +28,7 @@ import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.TrackDetailActivity;
+import br.com.bioscada.apps.biotracks.TrackDetailActivity;
 import com.google.android.apps.mytracks.io.file.TrackFileFormat;
 import com.google.android.apps.mytracks.util.DialogUtils;
 import com.google.android.apps.mytracks.util.FileUtils;
@@ -37,7 +37,7 @@ import com.google.android.apps.mytracks.util.UriUtils;
 
 import java.io.File;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An activity to import files from the external storage. Optionally to import

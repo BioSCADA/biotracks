@@ -38,8 +38,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.google.android.apps.mytracks.MarkerEditActivity;
-import com.google.android.apps.mytracks.TrackDetailActivity;
+import br.com.bioscada.apps.biotracks.MarkerEditActivity;
+import br.com.bioscada.apps.biotracks.TrackDetailActivity;
 import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
 import com.google.android.apps.mytracks.content.Track;
 import com.google.android.apps.mytracks.content.Waypoint;
@@ -53,7 +53,7 @@ import com.google.android.apps.mytracks.util.StatsUtils;
 import com.google.android.apps.mytracks.util.StringUtils;
 import com.google.android.apps.mytracks.util.TrackIconUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A fragment to show marker details.

@@ -30,8 +30,8 @@ import android.support.v4.app.TaskStackBuilder;
 import android.view.View;
 import android.widget.RemoteViews;
 
-import com.google.android.apps.mytracks.TrackDetailActivity;
-import com.google.android.apps.mytracks.TrackListActivity;
+import br.com.bioscada.apps.biotracks.TrackDetailActivity;
+import br.com.bioscada.apps.biotracks.TrackListActivity;
 import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
 import com.google.android.apps.mytracks.content.Track;
 import com.google.android.apps.mytracks.services.ControlRecordingService;
@@ -41,7 +41,7 @@ import com.google.android.apps.mytracks.util.IntentUtils;
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 import com.google.android.apps.mytracks.util.StringUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A track widget to start/stop/pause/resume recording, launch My Tracks, and

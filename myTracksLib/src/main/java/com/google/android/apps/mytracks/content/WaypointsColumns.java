@@ -33,7 +33,7 @@ public interface WaypointsColumns extends BaseColumns {
 
   public static final String TABLE_NAME = "waypoints";
   public static final Uri CONTENT_URI = Uri.parse(
-      "content://br.com.bioscada.apps.mytracks/waypoints");
+      "content://br.com.bioscada.apps.biotracks/waypoints");
   public static final String CONTENT_TYPE = "vnd.android.cursor.dir/vnd.google.waypoint";
   public static final String CONTENT_ITEMTYPE = "vnd.android.cursor.item/vnd.google.waypoint";
   public static final String DEFAULT_SORT_ORDER = "_id";

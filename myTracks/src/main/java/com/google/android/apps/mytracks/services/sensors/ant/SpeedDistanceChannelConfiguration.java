@@ -16,7 +16,7 @@
 
 package com.google.android.apps.mytracks.services.sensors.ant;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Speed distance monitor channel configuration.

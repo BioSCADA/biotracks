@@ -40,7 +40,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A DialogFragment to choose an activity.

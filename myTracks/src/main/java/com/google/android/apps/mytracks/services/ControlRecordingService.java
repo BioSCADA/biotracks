@@ -27,7 +27,7 @@ import android.util.Log;
 import com.google.android.apps.mytracks.widgets.TrackWidgetProvider;
 import com.google.common.annotations.VisibleForTesting;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A service to control starting and stopping of a recording. This service,

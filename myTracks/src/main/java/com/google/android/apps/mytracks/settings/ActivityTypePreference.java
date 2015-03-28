@@ -33,7 +33,7 @@ import com.google.android.apps.mytracks.util.DialogUtils;
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 import com.google.android.apps.mytracks.util.TrackIconUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * For entering the default activity type.

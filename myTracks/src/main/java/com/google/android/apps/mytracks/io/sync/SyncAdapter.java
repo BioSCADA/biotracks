@@ -61,7 +61,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * SyncAdapter to sync tracks with Google Drive.

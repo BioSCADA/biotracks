@@ -23,7 +23,7 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.database.ContentObserver;
 import android.net.Uri;
 
-import com.google.android.apps.mytracks.Constants;
+import br.com.bioscada.apps.biotracks.Constants;
 
 /**
  * Data source on the phone.

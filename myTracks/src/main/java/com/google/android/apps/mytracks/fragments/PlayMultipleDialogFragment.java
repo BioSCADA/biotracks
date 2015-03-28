@@ -30,7 +30,7 @@ import com.google.android.apps.mytracks.util.TrackUtils;
 
 import java.util.ArrayList;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A DialogFragment to play multiple tracks.

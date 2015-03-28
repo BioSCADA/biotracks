@@ -26,7 +26,7 @@ import com.google.common.annotations.VisibleForTesting;
 
 import java.util.Vector;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An implementation of {@link DescriptionGenerator} for My Tracks.

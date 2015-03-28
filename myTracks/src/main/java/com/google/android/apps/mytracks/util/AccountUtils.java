@@ -22,7 +22,7 @@ import android.support.v4.app.FragmentActivity;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities for account.

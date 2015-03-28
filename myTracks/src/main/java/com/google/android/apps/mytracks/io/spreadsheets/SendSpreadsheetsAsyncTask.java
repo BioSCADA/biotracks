@@ -52,7 +52,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.Locale;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * AsyncTask to send a track to Google Spreadsheet.

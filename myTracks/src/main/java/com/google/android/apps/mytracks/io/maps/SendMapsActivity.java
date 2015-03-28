@@ -26,7 +26,7 @@ import com.google.android.apps.mytracks.io.spreadsheets.SendSpreadsheetsActivity
 import com.google.android.apps.mytracks.util.IntentUtils;
 import com.google.common.annotations.VisibleForTesting;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An activity to send a track to Google Maps.

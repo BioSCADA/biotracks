@@ -29,5 +29,5 @@ limitations under the License.
   <string name="track_update_broadcast_action">com.google.android.apps.mytracks.TRACK_UPDATE</string>
   <!-- My Tracks service -->
   <string name="mytracks_service_class">com.google.android.apps.mytracks.services.TrackRecordingService</string>
-  <string name="mytracks_service_package">br.com.bioscada.apps.mytracks</string>
+  <string name="mytracks_service_package">br.com.bioscada.apps.biotracks</string>
 </resources>

@@ -41,7 +41,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.UUID;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
 /**

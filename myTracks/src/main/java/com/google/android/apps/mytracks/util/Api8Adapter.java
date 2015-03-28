@@ -29,8 +29,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TabWidget;
 
-import com.google.android.apps.mytracks.ContextualActionModeCallback;
-import com.google.android.apps.mytracks.TrackController;
+import br.com.bioscada.apps.biotracks.ContextualActionModeCallback;
+import br.com.bioscada.apps.biotracks.TrackController;
 import com.google.android.apps.mytracks.services.sensors.BluetoothConnectionManager;
 import com.google.android.apps.mytracks.widgets.TrackWidgetProvider;
 import com.google.api.client.http.HttpTransport;

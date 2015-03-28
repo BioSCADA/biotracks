@@ -31,8 +31,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ZoomControls;
 
-import com.google.android.apps.mytracks.ChartView;
-import com.google.android.apps.mytracks.TrackDetailActivity;
+import br.com.bioscada.apps.biotracks.ChartView;
+import br.com.bioscada.apps.biotracks.TrackDetailActivity;
 import com.google.android.apps.mytracks.content.MyTracksLocation;
 import com.google.android.apps.mytracks.content.Sensor;
 import com.google.android.apps.mytracks.content.Sensor.SensorDataSet;
@@ -52,7 +52,7 @@ import com.google.common.annotations.VisibleForTesting;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A fragment to display track chart and pacer to the user.

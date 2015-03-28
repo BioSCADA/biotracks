@@ -4,7 +4,7 @@ android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
     defaultConfig {
-        applicationId "br.com.bioscada.apps.mytracks"
+        applicationId "br.com.bioscada.apps.biotracks"
         minSdkVersion 10
         targetSdkVersion 22
         versionCode 1

@@ -19,7 +19,7 @@ import android.content.Context;
 
 import com.google.android.apps.mytracks.content.Sensor;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A collection of methods for message parsers.

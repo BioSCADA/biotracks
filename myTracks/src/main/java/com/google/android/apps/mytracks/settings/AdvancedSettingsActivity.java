@@ -31,12 +31,12 @@ import android.preference.Preference.OnPreferenceClickListener;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.Constants;
+import br.com.bioscada.apps.biotracks.Constants;
 import com.google.android.apps.mytracks.io.sync.SyncUtils;
 import com.google.android.apps.mytracks.util.DialogUtils;
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An activity for advanced settings.

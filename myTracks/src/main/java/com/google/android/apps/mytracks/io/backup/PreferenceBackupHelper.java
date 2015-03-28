@@ -31,7 +31,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Map;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Helper for backing up and restoring shared preferences.

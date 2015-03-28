@@ -26,8 +26,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TabWidget;
 
-import com.google.android.apps.mytracks.ContextualActionModeCallback;
-import com.google.android.apps.mytracks.TrackController;
+import br.com.bioscada.apps.biotracks.ContextualActionModeCallback;
+import br.com.bioscada.apps.biotracks.TrackController;
 import com.google.api.client.http.HttpTransport;
 
 import java.io.IOException;

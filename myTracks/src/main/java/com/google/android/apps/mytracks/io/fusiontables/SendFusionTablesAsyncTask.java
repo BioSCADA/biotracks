@@ -8,7 +8,7 @@ import android.database.Cursor;
 import android.location.Location;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.Constants;
+import br.com.bioscada.apps.biotracks.Constants;
 import com.google.android.apps.mytracks.content.DescriptionGenerator;
 import com.google.android.apps.mytracks.content.DescriptionGeneratorImpl;
 import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
@@ -46,7 +46,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * AsyncTask to send a track to Google Fusion Tables.

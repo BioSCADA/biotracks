@@ -24,7 +24,7 @@ import com.google.common.annotations.VisibleForTesting;
 
 import java.util.Vector;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * This class will generate google chart server url's.

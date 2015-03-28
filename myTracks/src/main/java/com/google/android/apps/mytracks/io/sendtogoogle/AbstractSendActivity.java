@@ -24,7 +24,7 @@ import android.os.Bundle;
 
 import com.google.android.apps.mytracks.util.DialogUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * The abstract class for activities sending a track to Google.

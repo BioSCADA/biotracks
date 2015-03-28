@@ -9,7 +9,7 @@
     <!-- From: file:/home/diego/Documents/MyTracks/biotracks/biotracks/myTracksLib/src/main/res/values/third_party.xml -->
     <eat-comment/>
     <string name="mytracks_service_class">com.google.android.apps.mytracks.services.TrackRecordingService</string>
-    <string name="mytracks_service_package">br.com.bioscada.apps.mytracks</string>
+    <string name="mytracks_service_package">br.com.bioscada.apps.biotracks</string>
     <string name="read_track_data_permission">com.google.android.apps.mytracks.READ_TRACK_DATA</string>
     <string name="track_id_broadcast_extra">com.google.android.apps.mytracks.TRACK_ID</string>
     <string name="track_paused_broadcast_action">com.google.android.apps.mytracks.TRACK_PAUSED</string>

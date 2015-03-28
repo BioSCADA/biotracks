@@ -25,7 +25,7 @@ import android.support.v4.app.FragmentActivity;
 
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A DialogFrament to confirm sync to Google Drive.

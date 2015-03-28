@@ -40,7 +40,7 @@ import com.google.android.apps.mytracks.util.PreferencesUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An activity for accessing sensor settings.

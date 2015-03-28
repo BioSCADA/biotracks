@@ -24,7 +24,7 @@ import android.content.DialogInterface.OnClickListener;
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 import com.google.android.gms.maps.GoogleMap;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A DialogFragment to select a map layer.

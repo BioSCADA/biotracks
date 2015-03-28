@@ -38,7 +38,7 @@ import com.google.android.apps.mytracks.util.TrackIconUtils;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A DialogFragment to choose an activity type.

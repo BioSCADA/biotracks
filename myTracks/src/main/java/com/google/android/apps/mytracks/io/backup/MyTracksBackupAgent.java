@@ -23,7 +23,7 @@ import android.content.SharedPreferences;
 import android.os.ParcelFileDescriptor;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.Constants;
+import br.com.bioscada.apps.biotracks.Constants;
 
 import java.io.IOException;
 

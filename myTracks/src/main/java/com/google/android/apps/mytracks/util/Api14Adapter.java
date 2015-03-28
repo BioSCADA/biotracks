@@ -22,7 +22,7 @@ import android.app.Activity;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
-import com.google.android.apps.mytracks.TrackController;
+import br.com.bioscada.apps.biotracks.TrackController;
 
 /**
  * API level 14 specific implementation of the {@link ApiAdapter}.

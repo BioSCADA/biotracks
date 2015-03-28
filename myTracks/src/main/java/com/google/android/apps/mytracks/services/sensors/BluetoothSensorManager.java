@@ -32,7 +32,7 @@ import com.google.android.apps.mytracks.util.UnitConversions;
 
 import java.util.ArrayList;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Bluetooth sensor manager.
@@ -94,6 +94,7 @@ public class BluetoothSensorManager extends SensorManager {
 
   // Handler that gets information back from the bluetoothConnectionManager
   private final Handler messageHandler = new Handler(Looper.getMainLooper()) {
+    long times = System.currentTimeMillis();
       @Override
     public void handleMessage(Message message) {
       switch (message.what) {
@@ -107,7 +108,8 @@ public class BluetoothSensorManager extends SensorManager {
           try {
             byte[] readBuf = (byte[]) message.obj;
             sensorDataSet = messageParser.parseBuffer(readBuf);
-            Log.d(TAG, "MESSAGE_READ: " + sensorDataSet);
+            Log.d(TAG, "MESSAGE_READ: elapsed " +( times - System.currentTimeMillis() ) +" DATA " + sensorDataSet);
+            times = System.currentTimeMillis();
           } catch (IllegalArgumentException e) {
             sensorDataSet = null;
             Log.i(TAG, "Unexpected exception on read", e);

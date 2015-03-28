@@ -32,7 +32,7 @@ public interface TracksColumns extends BaseColumns {
    * Tracks provider uri.
    */
   public static final Uri CONTENT_URI = Uri.parse(
-      "content://br.com.bioscada.apps.mytracks/tracks");
+      "content://br.com.bioscada.apps.biotracks/tracks");
 
   /**
    * Track content type.

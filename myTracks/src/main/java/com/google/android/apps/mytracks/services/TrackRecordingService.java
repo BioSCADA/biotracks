@@ -36,9 +36,9 @@ import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.Constants;
-import com.google.android.apps.mytracks.TrackDetailActivity;
-import com.google.android.apps.mytracks.TrackListActivity;
+import br.com.bioscada.apps.biotracks.Constants;
+import br.com.bioscada.apps.biotracks.TrackDetailActivity;
+import br.com.bioscada.apps.biotracks.TrackListActivity;
 import com.google.android.apps.mytracks.content.DescriptionGeneratorImpl;
 import com.google.android.apps.mytracks.content.MyTracksLocation;
 import com.google.android.apps.mytracks.content.MyTracksProvider;
@@ -77,7 +77,7 @@ import com.google.common.annotations.VisibleForTesting;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A background service that registers a location listener and records track
@@ -203,6 +203,7 @@ public class TrackRecordingService extends Service {
                 locationListenerPolicy = new AdaptiveLocationListenerPolicy(
                     ONE_SECOND, 30 * ONE_SECOND, 0);
                 break;
+
               default:
                 locationListenerPolicy = new AbsoluteLocationListenerPolicy(
                     minRecordingInterval * ONE_SECOND);

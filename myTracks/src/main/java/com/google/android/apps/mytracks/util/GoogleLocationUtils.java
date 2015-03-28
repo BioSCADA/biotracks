@@ -26,7 +26,7 @@ import android.net.Uri;
 import android.provider.Settings;
 import android.util.Log;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities for Google location settings

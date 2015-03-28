@@ -24,7 +24,7 @@ import com.google.android.apps.mytracks.io.sendtogoogle.SendRequest;
 import com.google.android.apps.mytracks.io.sendtogoogle.UploadResultActivity;
 import com.google.android.apps.mytracks.util.IntentUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * An activity to send a track to Google Spreadsheet.

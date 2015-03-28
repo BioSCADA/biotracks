@@ -24,7 +24,7 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.Constants;
+import br.com.bioscada.apps.biotracks.Constants;
 import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
 import com.google.android.apps.mytracks.content.Track;
 import com.google.android.apps.mytracks.content.TracksColumns;
@@ -52,7 +52,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities for Google Drive sync.
@@ -97,7 +97,7 @@ public class SyncUtils {
       + "' and trashed = false";
 
   private static final String TAG = SyncUtils.class.getSimpleName();
-  private static final String SYNC_AUTHORITY = "br.com.bioscada.apps.mytracks";
+  private static final String SYNC_AUTHORITY = "br.com.bioscada.apps.biotracks";
 
   private SyncUtils() {}
 

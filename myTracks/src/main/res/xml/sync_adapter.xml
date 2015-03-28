@@ -15,7 +15,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <sync-adapter xmlns:android="http://schemas.android.com/apk/res/android"
-        android:contentAuthority="br.com.bioscada.apps.mytracks" 
+        android:contentAuthority="br.com.bioscada.apps.biotracks"
         android:accountType="com.google"
         android:userVisible="true" 
         android:supportsUploading="true" />

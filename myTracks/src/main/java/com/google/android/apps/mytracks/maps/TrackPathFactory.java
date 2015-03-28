@@ -18,7 +18,7 @@ package com.google.android.apps.mytracks.maps;
 
 import android.content.Context;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A factory for {@link TrackPath}.

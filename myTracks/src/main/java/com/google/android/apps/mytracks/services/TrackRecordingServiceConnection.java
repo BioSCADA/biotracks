@@ -27,7 +27,7 @@ import android.util.Log;
 
 import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
 
-import br.com.bioscada.apps.mytracks.BuildConfig;
+import br.com.bioscada.apps.biotracks.BuildConfig;
 
 /**
  * Wrapper for the track recording service. This handles service

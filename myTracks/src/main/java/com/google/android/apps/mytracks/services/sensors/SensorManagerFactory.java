@@ -26,7 +26,7 @@ import com.google.android.apps.mytracks.services.sensors.ble.HrmSensor;
 import com.google.android.apps.mytracks.util.AnalyticsUtils;
 import com.google.android.apps.mytracks.util.PreferencesUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A factory of {@link SensorManager}.

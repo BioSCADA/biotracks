@@ -36,9 +36,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.MapOverlay;
-import com.google.android.apps.mytracks.MarkerDetailActivity;
-import com.google.android.apps.mytracks.TrackDetailActivity;
+import br.com.bioscada.apps.biotracks.MapOverlay;
+import br.com.bioscada.apps.biotracks.MarkerDetailActivity;
+import br.com.bioscada.apps.biotracks.TrackDetailActivity;
 import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
 import com.google.android.apps.mytracks.content.MyTracksProviderUtils.Factory;
 import com.google.android.apps.mytracks.content.Track;
@@ -72,7 +72,7 @@ import com.google.android.gms.maps.model.Polyline;
 import java.util.ArrayList;
 import java.util.EnumSet;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A fragment to display map to the user.

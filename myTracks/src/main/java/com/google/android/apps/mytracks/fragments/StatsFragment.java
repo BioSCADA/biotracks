@@ -28,7 +28,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Spinner;
 
-import com.google.android.apps.mytracks.TrackDetailActivity;
+import br.com.bioscada.apps.biotracks.TrackDetailActivity;
 import com.google.android.apps.mytracks.content.Track;
 import com.google.android.apps.mytracks.content.TrackDataHub;
 import com.google.android.apps.mytracks.content.TrackDataListener;
@@ -45,7 +45,7 @@ import com.google.android.apps.mytracks.util.UnitConversions;
 
 import java.util.EnumSet;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A fragment to display track statistics to the user.

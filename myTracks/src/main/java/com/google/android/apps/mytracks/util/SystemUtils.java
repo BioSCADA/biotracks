@@ -44,7 +44,7 @@ public class SystemUtils {
   public static String getMyTracksVersion(Context context) {
     try {
       PackageInfo pi = context.getPackageManager()
-          .getPackageInfo("br.com.bioscada.apps.mytracks", PackageManager.GET_META_DATA);
+          .getPackageInfo("br.com.bioscada.apps.biotracks", PackageManager.GET_META_DATA);
       return pi.versionName;
     } catch (NameNotFoundException e) {
       Log.w(TAG, "Failed to get version info.", e);

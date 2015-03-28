@@ -25,7 +25,7 @@ import android.widget.ImageView;
 
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Image adapter for choosing an activity type.

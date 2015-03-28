@@ -34,7 +34,7 @@ import java.io.PrintWriter;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Write track as CSV to a file. See RFC 4180 for info on CSV. Output three

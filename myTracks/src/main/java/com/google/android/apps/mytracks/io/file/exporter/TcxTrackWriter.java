@@ -32,7 +32,7 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.util.Locale;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Write track as TCX to a file. See http://developer.garmin.com/schemas/tcx/v2/

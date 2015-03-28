@@ -26,7 +26,7 @@ import android.provider.SearchRecentSuggestions;
  */
 public class SearchEngineProvider extends SearchRecentSuggestionsProvider {
 
-  private static final String AUTHORITY = "br.com.bioscada.apps.mytracks.search";
+  private static final String AUTHORITY = "br.com.bioscada.apps.biotracks.search";
   private static final int MODE = DATABASE_MODE_QUERIES;
 
   public SearchEngineProvider() {

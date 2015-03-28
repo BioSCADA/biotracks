@@ -28,7 +28,7 @@ import com.google.android.apps.mytracks.util.CalorieUtils.ActivityType;
 
 import java.util.Locale;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Utilities for updating the statistics UI labels and values.

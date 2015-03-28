@@ -26,7 +26,7 @@ import android.widget.Toast;
 
 import com.google.android.apps.mytracks.util.GoogleEarthUtils;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A DialogFragment to install Google Earth.

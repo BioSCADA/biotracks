@@ -29,7 +29,7 @@ import java.io.PrintWriter;
 import java.text.NumberFormat;
 import java.util.Locale;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Write track as GPX to a file.

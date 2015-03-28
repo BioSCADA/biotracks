@@ -32,7 +32,7 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * Track data hub. Receives data from {@link DataSource} and distributes it to

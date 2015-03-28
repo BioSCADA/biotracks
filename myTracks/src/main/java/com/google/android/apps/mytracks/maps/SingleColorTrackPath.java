@@ -17,7 +17,7 @@ package com.google.android.apps.mytracks.maps;
 
 import android.content.Context;
 
-import com.google.android.apps.mytracks.MapOverlay.CachedLocation;
+import br.com.bioscada.apps.biotracks.MapOverlay.CachedLocation;
 import com.google.android.apps.mytracks.stats.TripStatistics;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
@@ -26,7 +26,7 @@ import com.google.android.gms.maps.model.Polyline;
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bioscada.apps.mytracks.R;
+import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A single color track path.
