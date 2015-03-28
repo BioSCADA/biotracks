@@ -1,0 +1,289 @@
+ECLIPSE ANDROID PROJECT IMPORT SUMMARY
+======================================
+
+Manifest Merging:
+-----------------
+Your project uses libraries that provide manifests, and your Eclipse
+project did not explicitly turn on manifest merging. In Android Gradle
+projects, manifests are always merged (meaning that contents from your
+libraries' manifests will be merged into the app manifest. If you had
+manually copied contents from library manifests into your app manifest
+you may need to remove these for the app to build correctly.
+
+Ignored Files:
+--------------
+The following files were *not* copied into the new Gradle project; you
+should evaluate whether these are still needed in your project and if
+so manually move them:
+
+From MyTracks:
+* .gitignore
+* .google_apis/
+* .google_apis/drive-v2r30lv1.12.0-beta/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/classpath-include
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/BSD-LICENSE.txt
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/css/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/css/maven-base.css
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/css/maven-theme.css
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/css/print.css
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/css/site.css
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/dependencies.html
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/close.gif
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/collapsed.gif
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/expanded.gif
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/external.png
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/icon_error_sml.gif
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/icon_info_sml.gif
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/icon_success_sml.gif
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/icon_warning_sml.gif
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/logos/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/logos/build-by-maven-black.png
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/logos/build-by-maven-white.png
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/logos/maven-feather.png
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/dependencies/images/newwindow.png
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/descriptor.json
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/google-api-services-drive-v2-rev30-1.12.0-beta-javadoc.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/google-api-services-drive-v2-rev30-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/google-api-services-drive-v2-rev30-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/google-api-services-drive-v2-rev30-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/icons/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/icons/drive_icon_16.png
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/icons/drive_icon_32.png
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-api-client-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-api-client-android-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-http-client-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-http-client-android-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-http-client-gson-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-http-client-jackson-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-http-client-jackson2-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/google-oauth-client-1.12.0-beta-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/gson-2.1-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/guava-jdk5-13.0-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/jackson-core-2.0.5-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs-sources/jackson-core-asl-1.9.9-sources.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-api-client-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-api-client-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-api-client-android-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-api-client-android-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-android-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-android-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-gson-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-gson-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-jackson-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-jackson-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-jackson2-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-http-client-jackson2-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-oauth-client-1.12.0-beta.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/google-oauth-client-1.12.0-beta.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/gson-2.1.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/gson-2.1.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/guava-jdk5-13.0.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/guava-jdk5-13.0.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/jackson-core-2.0.5.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/jackson-core-2.0.5.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/jackson-core-asl-1.9.9.jar
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/libs/jackson-core-asl-1.9.9.jar.properties
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/proguard-google-api-client.txt
+* .google_apis/drive-v2r30lv1.12.0-beta/drive/readme.html
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/LICENSE.txt
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/classpath-include
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/BSD-LICENSE.txt
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/css/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/css/maven-base.css
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/css/maven-theme.css
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/css/print.css
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/css/site.css
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/dependencies.html
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/close.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/collapsed.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/expanded.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/external.png
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/icon_error_sml.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/icon_info_sml.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/icon_success_sml.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/icon_warning_sml.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/logos/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/logos/build-by-maven-black.png
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/logos/build-by-maven-white.png
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/logos/maven-feather.png
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/dependencies/images/newwindow.png
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/descriptor.json
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/google-api-services-fusiontables-v1-rev16-1.12.0-beta-javadoc.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/google-api-services-fusiontables-v1-rev16-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/icons/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/icons/search-16.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/icons/search-32.gif
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-api-client-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-api-client-android-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-http-client-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-http-client-android-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-http-client-gson-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-http-client-jackson-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-http-client-jackson2-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/google-oauth-client-1.12.0-beta-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/gson-2.1-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/guava-jdk5-13.0-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/jackson-core-2.0.5-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs-sources/jackson-core-asl-1.9.9-sources.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-api-client-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-api-client-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-api-client-android-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-api-client-android-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-android-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-android-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-gson-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-gson-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-jackson-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-jackson-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-jackson2-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-http-client-jackson2-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-oauth-client-1.12.0-beta.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/google-oauth-client-1.12.0-beta.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/gson-2.1.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/gson-2.1.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/guava-jdk5-13.0.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/guava-jdk5-13.0.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/jackson-core-2.0.5.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/jackson-core-2.0.5.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/jackson-core-asl-1.9.9.jar
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/libs/jackson-core-asl-1.9.9.jar.properties
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/proguard-google-api-client.txt
+* .google_apis/fusiontables-v1r16lv1.12.0-beta/fusiontables/readme.html
+* .google_apis/gdata-spreadsheet-2.1/
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/descriptor.json
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/gdata-client-1.0.jar
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/gdata-spreadsheet-3.0-javadoc.jar
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/gdata-spreadsheet-3.0-src.jar
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/gdata-spreadsheet-3.0.jar
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/gdata-spreadsheet-meta-3.0.jar
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/icons/
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/icons/gdata-spreadsheet-16.png
+* .google_apis/gdata-spreadsheet-2.1/gdata-spreadsheet-3.0/jsr305.jar
+* MyTracks.launch
+* proguard/
+* proguard/dump.txt
+* proguard/mapping.txt
+* proguard/seeds.txt
+* proguard/usage.txt
+From MyTracksLib:
+* .gitignore
+* proto/
+* proto/sensor.proto
+
+Replaced Jars with Dependencies:
+--------------------------------
+The importer recognized the following .jar files as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the .jar file in your project was of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the jar replacement in the import wizard and try again:
+
+android-support-v4.jar => com.android.support:support-v4:21.0.3
+google-http-client-gson-1.12.0-beta.jar => com.google.http-client:google-http-client-gson:1.19.0
+gson-2.1.jar => com.google.code.gson:gson:2.1
+guava-jdk5-13.0.jar => com.google.guava:guava:17.0
+protobuf-java-2.3.0-lite.jar => com.google.protobuf:protobuf-java:2.5
+
+Potentially Missing Dependency:
+-------------------------------
+When we replaced the following .jar files with a Gradle dependency, we
+inferred the dependency version number from the filename. This
+specific version may not actually be available from the repository.
+If you get a build error stating that the dependency is missing, edit
+the version number to for example "+" to pick up the latest version
+instead. (This may require you to update your code if the library APIs
+have changed.)
+
+gson-2.1.jar => version 2.1 in com.google.code.gson:gson:2.1
+
+Replaced Libraries with Dependencies:
+-------------------------------------
+The importer recognized the following library projects as third party
+libraries and replaced them with Gradle dependencies instead. This has
+the advantage that more explicit version information is known, and the
+libraries can be updated automatically. However, it is possible that
+the source files in your project were of an older version than the
+dependency we picked, which could render the project not compileable.
+You can disable the library replacement in the import wizard and try
+again:
+
+google-play-services_lib => [com.google.android.gms:play-services:+]
+
+Moved Files:
+------------
+Android Gradle projects use a different directory structure than ADT
+Eclipse projects. Here's how the projects were restructured:
+
+In MyTracksLib:
+* AndroidManifest.xml => myTracksLib/src/main/AndroidManifest.xml
+* lint.xml => myTracksLib/lint.xml
+* res/ => myTracksLib/src/main/res/
+* src/ => myTracksLib/src/main/java/
+* src/com/google/android/apps/mytracks/content/Waypoint.aidl => myTracksLib/src/main/aidl/com/google/android/apps/mytracks/content/Waypoint.aidl
+* src/com/google/android/apps/mytracks/content/WaypointCreationRequest.aidl => myTracksLib/src/main/aidl/com/google/android/apps/mytracks/content/WaypointCreationRequest.aidl
+* src/com/google/android/apps/mytracks/services/ITrackRecordingService.aidl => myTracksLib/src/main/aidl/com/google/android/apps/mytracks/services/ITrackRecordingService.aidl
+* src/com/google/android/apps/mytracks/stats/TripStatistics.aidl => myTracksLib/src/main/aidl/com/google/android/apps/mytracks/stats/TripStatistics.aidl
+In MyTracks:
+* AndroidManifest.xml => myTracks/src/main/AndroidManifest.xml
+* assets/ => myTracks/src/main/assets/
+* libs/antlib.jar => myTracks/libs/antlib.jar
+* libs/gdata-client-1.0.jar => myTracks/libs/gdata-client-1.0.jar
+* libs/gdata-client-meta-1.0.jar => myTracks/libs/gdata-client-meta-1.0.jar
+* libs/gdata-core-1.0.jar => myTracks/libs/gdata-core-1.0.jar
+* libs/gdata-spreadsheet-3.0.jar => myTracks/libs/gdata-spreadsheet-3.0.jar
+* libs/gdata-spreadsheet-meta-3.0.jar => myTracks/libs/gdata-spreadsheet-meta-3.0.jar
+* libs/google-api-client-1.12.0-beta.jar => myTracks/libs/google-api-client-1.12.0-beta.jar
+* libs/google-api-client-android-1.12.0-beta.jar => myTracks/libs/google-api-client-android-1.12.0-beta.jar
+* libs/google-api-services-drive-v2-rev30-1.12.0-beta.jar => myTracks/libs/google-api-services-drive-v2-rev30-1.12.0-beta.jar
+* libs/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar => myTracks/libs/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar
+* libs/google-common.jar => myTracks/libs/google-common.jar
+* libs/google-http-client-1.12.0-beta.jar => myTracks/libs/google-http-client-1.12.0-beta.jar
+* libs/google-http-client-android-1.12.0-beta.jar => myTracks/libs/google-http-client-android-1.12.0-beta.jar
+* libs/google-http-client-jackson-1.12.0-beta.jar => myTracks/libs/google-http-client-jackson-1.12.0-beta.jar
+* libs/google-http-client-jackson2-1.12.0-beta.jar => myTracks/libs/google-http-client-jackson2-1.12.0-beta.jar
+* libs/google-oauth-client-1.12.0-beta.jar => myTracks/libs/google-oauth-client-1.12.0-beta.jar
+* libs/google-play-services.jar => myTracks/libs/google-play-services.jar
+* libs/jackson-core-2.0.5.jar => myTracks/libs/jackson-core-2.0.5.jar
+* libs/jackson-core-asl-1.9.9.jar => myTracks/libs/jackson-core-asl-1.9.9.jar
+* libs/jsr305.jar => myTracks/libs/jsr305.jar
+* libs/libGoogleAnalytics.jar => myTracks/libs/libGoogleAnalytics.jar
+* lint.xml => myTracks/lint.xml
+* proguard-google-api-client.txt => myTracks/proguard-google-api-client.txt
+* proguard.cfg => myTracks/proguard.cfg
+* res/ => myTracks/src/main/res/
+* src/ => myTracks/src/main/java/
+
+Next Steps:
+-----------
+You can now build the project. The Gradle project needs network
+connectivity to download dependencies.
+
+Bugs:
+-----
+If for some reason your project does not build, and you determine that
+it is due to a bug or limitation of the Eclipse to Gradle importer,
+please file a bug at http://b.android.com with category
+Component-Tools.
+
+(This import summary is for your information only, and can be deleted
+after import once you are satisfied with the results.)
