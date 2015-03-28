@@ -17,6 +17,7 @@ package com.google.android.apps.mytracks.io.file.exporter;
 
 import android.content.Context;
 import android.location.Location;
+import android.util.Log;
 
 import com.google.android.apps.mytracks.content.MyTracksLocation;
 import com.google.android.apps.mytracks.content.Sensor;
@@ -211,40 +212,12 @@ public class CsvTrackWriter implements TrackWriter {
                 if (sensorDataSet.hasHeartRate()) {
                     SensorData sensorData = sensorDataSet.getHeartRate();
                     if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        if( !heartRate.equals(l_heartRate)  ){
-                            heartRate = Integer.toString(sensorData.getValue());
-                            l_heartRate = heartRate;
-                        }else{
+                        heartRate = Integer.toString(sensorData.getValue());
+                        if(heartRate.equals(l_heartRate) ){
                             heartRate = "";
-                        }
-
-
-                    }
-                }
-                if (sensorDataSet.hasHeartRateRc1()) {
-                    SensorData sensorData = sensorDataSet.getHeartRateRc1();
-                    if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        heartRateRC1 = Integer.toString(sensorData.getValue());
-                        if(!heartRateRC1.equals(l_heartRateRC1)){
-                            l_heartRateRC1 = heartRateRC1;
                         }else{
-                            heartRateRC1 = "";
+                            l_heartRate = heartRate;
                         }
-
-
-                    }
-                }
-                if (sensorDataSet.hasHeartRateRc2()) {
-                    SensorData sensorData = sensorDataSet.getHeartRateRc2();
-                    if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
-                        if(!heartRateRC2.equals(l_heartRateRC2)){
-                            heartRateRC2 = Integer.toString(sensorData.getValue());
-                            l_heartRateRC2 = heartRateRC2;
-                        }else{
-                            heartRateRC2 = "";
-                        }
-
-
                     }
                 }
                 if (sensorDataSet.hasBpm()) {
@@ -271,6 +244,29 @@ public class CsvTrackWriter implements TrackWriter {
                         meditation = Integer.toString(sensorData.getValue());
                     }
                 }
+                if (sensorDataSet.hasHeartRateRc1()) {
+                    SensorData sensorData = sensorDataSet.getHeartRateRc1();
+                    if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                        heartRateRC1 = Integer.toString(sensorData.getValue());
+                        if(heartRateRC1.equals(l_heartRateRC1)){
+                            heartRateRC1 = "";
+                        }else{
+                            l_heartRateRC1 = heartRateRC1;
+
+                        }
+                    }
+                }
+                if (sensorDataSet.hasHeartRateRc2()) {
+                    SensorData sensorData = sensorDataSet.getHeartRateRc2();
+                    if (sensorData.hasValue() && sensorData.getState() == Sensor.SensorState.SENDING) {
+                        heartRateRC2 = Integer.toString(sensorData.getValue());
+                        if(heartRateRC2.equals(l_heartRateRC2)){
+                            heartRateRC2 = "";
+                        }else{
+                            l_heartRateRC2 = heartRateRC2;
+                        }
+                    }
+                }
             }
         }
         pointIndex++;
@@ -292,7 +288,10 @@ public class CsvTrackWriter implements TrackWriter {
                 attention,
                 meditation);
 
-        if(heartRateRC1 !=  l_heartRateRC1){
+    //    Log.d("POLAR", "pointIndex "+ pointIndex + " heartRate " + heartRate+" heartRateRC1 " + heartRateRC1+" l_heartRateRC1 " + l_heartRateRC1+" heartRateRC2 " + heartRateRC2+" l_heartRateRC2 " + l_heartRateRC2);
+
+       if(!heartRateRC1.isEmpty()){
+            //Log.d("POLAR", "pointIndex "+ pointIndex + " heartRate " + heartRate+" heartRateRC1 " + heartRateRC1+" l_heartRateRC1 " + l_heartRateRC1+" heartRateRC2 " + heartRateRC2+" l_heartRateRC2 " + l_heartRateRC2);
 
             writeCommaSeparatedLine(
                     Integer.toString(segmentIndex),
@@ -312,7 +311,8 @@ public class CsvTrackWriter implements TrackWriter {
                     attention,
                     meditation);
         }
-        if(heartRateRC2 !=  l_heartRateRC2){
+        if(!heartRateRC2.isEmpty()){
+            //Log.d("POLAR", "pointIndex "+ pointIndex + " heartRate " + heartRate+" heartRateRC1 " + heartRateRC1+" l_heartRateRC1 " + l_heartRateRC1+" heartRateRC2 " + heartRateRC2+" l_heartRateRC2 " + l_heartRateRC2);
 
             writeCommaSeparatedLine(
                     Integer.toString(segmentIndex),

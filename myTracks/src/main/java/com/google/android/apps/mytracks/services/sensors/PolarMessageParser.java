@@ -81,10 +81,11 @@ public class PolarMessageParser implements MessageParser {
             if (packetValid(buffer, 0)){
                 crr = SensorUtils.unsignedShortToInt(buffer, i);
             }else{
-                crr = (int) (lastHeartRate);
+                Log.d("POLAR", "INVALID < packetValid | " + crr );
+                return null;
             }
             if (crr < 300){
-                Log.d("POLAR", "INVALID < 300 | " + heartRate );
+                Log.d("POLAR", "INVALID < 300 | " + crr );
                 return null;
             }
             if (crr > 2000){
@@ -92,6 +93,7 @@ public class PolarMessageParser implements MessageParser {
                 return null;
             }
             rrVector.add((float)crr);
+            lastHeartRate = crr; // Remember good value for next time.
 
             if(i==6) {
                 heartRate = crr;
@@ -103,9 +105,8 @@ public class PolarMessageParser implements MessageParser {
             if(i==10) {
                 heartRateRC2 = crr;
             }
-            lastHeartRate = crr; // Remember good value for next time.
 
-            Log.d("POLAR", "i = " + i + " RR = " + crr+ " iBat = " + iBat+ " iSize = " + iSize);
+            Log.d("POLAR", System.currentTimeMillis() + " l " +rrVector.size()+  " i = " + i + " RR = " + crr+ " iBat = " + iBat+ " iSize = " + iSize);
 
         }
 
