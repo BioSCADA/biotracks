@@ -16,6 +16,7 @@
 
 package br.com.bioscada.apps.biotracks;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -30,26 +31,25 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.fragments.ChooseAccountDialogFragment;
-import com.google.android.apps.mytracks.fragments.ChooseAccountDialogFragment.ChooseAccountCaller;
-import com.google.android.apps.mytracks.fragments.ChooseActivityTypeDialogFragment;
-import com.google.android.apps.mytracks.fragments.ChooseActivityTypeDialogFragment.ChooseActivityTypeCaller;
-import com.google.android.apps.mytracks.fragments.EnableSyncDialogFragment;
-import com.google.android.apps.mytracks.fragments.EnableSyncDialogFragment.EnableSyncCaller;
-import com.google.android.apps.mytracks.io.sendtogoogle.SendToGoogleUtils;
-import com.google.android.apps.mytracks.io.sync.SyncUtils;
-import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
-import com.google.android.apps.mytracks.services.tasks.CheckPermissionAsyncTask;
-import com.google.android.apps.mytracks.services.tasks.CheckPermissionAsyncTask.CheckPermissionCaller;
-import com.google.android.apps.mytracks.util.EulaUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.TrackIconUtils;
-import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
-import com.google.android.apps.mytracks.util.TrackUtils;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.fragments.ChooseAccountDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ChooseAccountDialogFragment.ChooseAccountCaller;
+import br.com.bioscada.apps.biotracks.fragments.ChooseActivityTypeDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ChooseActivityTypeDialogFragment.ChooseActivityTypeCaller;
+import br.com.bioscada.apps.biotracks.fragments.EnableSyncDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.EnableSyncDialogFragment.EnableSyncCaller;
+import br.com.bioscada.apps.biotracks.io.sendtogoogle.SendToGoogleUtils;
+import br.com.bioscada.apps.biotracks.io.sync.SyncUtils;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
+import br.com.bioscada.apps.biotracks.services.tasks.CheckPermissionAsyncTask;
+import br.com.bioscada.apps.biotracks.services.tasks.CheckPermissionAsyncTask.CheckPermissionCaller;
+import br.com.bioscada.apps.biotracks.util.EulaUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.TrackIconUtils;
+import br.com.bioscada.apps.biotracks.util.TrackRecordingServiceConnectionUtils;
+import br.com.bioscada.apps.biotracks.util.TrackUtils;
 
 /**
  * An activity that let's the user see and edit the user editable track meta
@@ -176,8 +176,8 @@ public class TrackEditActivity extends AbstractMyTracksActivity implements Choos
         @Override
       public void onClick(View v) {
         TrackUtils.updateTrack(TrackEditActivity.this, track, name.getText().toString(),
-            activityType.getText().toString(), description.getText().toString(),
-            myTracksProviderUtils, trackRecordingServiceConnection, newWeight);
+                activityType.getText().toString(), description.getText().toString(),
+                myTracksProviderUtils, trackRecordingServiceConnection, newWeight);
 
         if (EulaUtils.showEnableSync(TrackEditActivity.this)) {
           EulaUtils.setShowEnableSync(TrackEditActivity.this);
@@ -222,7 +222,7 @@ public class TrackEditActivity extends AbstractMyTracksActivity implements Choos
   protected void onActivityResult(int requestCode, int resultCode, Intent data) {
     if (requestCode == DRIVE_REQUEST_CODE) {
       SendToGoogleUtils.cancelNotification(this, SendToGoogleUtils.DRIVE_NOTIFICATION_ID);
-      if (resultCode == RESULT_OK) {
+      if (resultCode == Activity.RESULT_OK) {
         onDrivePermissionSuccess();
       } else {
         onPermissionFailure();

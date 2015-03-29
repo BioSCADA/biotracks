@@ -33,6 +33,10 @@ limitations under the License.
     android:persistent="false"
     android:title="@string/track_detail_stats_tab" />
   <Preference
+    android:key="@string/settings_voice_key"
+    android:persistent="false"
+    android:title="@string/settings_voice" />
+  <Preference
     android:key="@string/settings_recording_key"
     android:persistent="false"
     android:title="@string/settings_recording" />

@@ -26,7 +26,8 @@ limitations under the License.
       android:layout_height="wrap_content"
       android:layout_width="match_parent" />
   </ScrollView>
-  <View style="@style/BottomButtonDivider" />
+  <View style="@style/BottomButtonDivider"
+      android:layout_height="78dp" />
   <LinearLayout style="@style/BottomButtonBar" >
     <Button
       android:id="@+id/help_feedback"

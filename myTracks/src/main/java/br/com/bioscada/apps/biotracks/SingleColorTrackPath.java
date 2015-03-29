@@ -17,16 +17,15 @@ package br.com.bioscada.apps.biotracks;
 
 import android.content.Context;
 
-import br.com.bioscada.apps.biotracks.MapOverlay.CachedLocation;
-import com.google.android.apps.mytracks.stats.TripStatistics;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Polyline;
+import com.google.android.lib.mytracks.stats.TripStatistics;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.MapOverlay.CachedLocation;
 
 /**
  * A single color track path.

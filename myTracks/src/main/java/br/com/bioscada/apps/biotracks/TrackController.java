@@ -25,12 +25,11 @@ import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.google.android.apps.mytracks.services.ITrackRecordingService;
-import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
-import com.google.android.apps.mytracks.util.StringUtils;
-import com.google.android.apps.mytracks.util.UnitConversions;
+import com.google.android.lib.mytracks.services.ITrackRecordingService;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
+import br.com.bioscada.apps.biotracks.util.StringUtils;
+import br.com.bioscada.apps.biotracks.util.UnitConversions;
 
 /**
  * Track controller for record, pause, resume, and stop.

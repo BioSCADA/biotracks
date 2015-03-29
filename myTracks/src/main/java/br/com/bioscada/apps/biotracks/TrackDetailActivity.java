@@ -17,6 +17,7 @@
 package br.com.bioscada.apps.biotracks;
 
 import android.accounts.Account;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -36,53 +37,49 @@ import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.content.TrackDataHub;
-import com.google.android.apps.mytracks.content.Waypoint;
-import com.google.android.apps.mytracks.content.Waypoint.WaypointType;
-import com.google.android.apps.mytracks.content.WaypointCreationRequest;
-import com.google.android.apps.mytracks.fragments.ChartAndPacerFragment;
-import com.google.android.apps.mytracks.fragments.ChartFragment;
-import com.google.android.apps.mytracks.fragments.ChooseActivityTypeDialogFragment;
-import com.google.android.apps.mytracks.fragments.ChooseActivityTypeDialogFragment.ChooseActivityTypeCaller;
-import com.google.android.apps.mytracks.fragments.ExportDialogFragment;
-import com.google.android.apps.mytracks.fragments.ExportDialogFragment.ExportCaller;
-import com.google.android.apps.mytracks.fragments.ExportDialogFragment.ExportType;
-import com.google.android.apps.mytracks.fragments.FrequencyDialogFragment;
-import com.google.android.apps.mytracks.fragments.MapLayerDialogFragment;
-import com.google.android.apps.mytracks.fragments.MyTracksMapFragment;
-import com.google.android.apps.mytracks.fragments.PacerFragment;
-import com.google.android.apps.mytracks.fragments.PlayMultipleDialogFragment;
-import com.google.android.apps.mytracks.fragments.PlayMultipleDialogFragment.PlayMultipleCaller;
-import com.google.android.apps.mytracks.fragments.StatsFragment;
-import com.google.android.apps.mytracks.io.file.TrackFileFormat;
-import com.google.android.apps.mytracks.io.file.exporter.SaveActivity;
-import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
-import com.google.android.apps.mytracks.settings.SettingsActivity;
-import com.google.android.apps.mytracks.util.AnalyticsUtils;
-import com.google.android.apps.mytracks.util.ApiAdapterFactory;
-import com.google.android.apps.mytracks.util.CalorieUtils;
-import com.google.android.apps.mytracks.util.CalorieUtils.ActivityType;
-import com.google.android.apps.mytracks.util.FileUtils;
-import com.google.android.apps.mytracks.util.IntentUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.TrackIconUtils;
-import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
-import com.google.android.apps.mytracks.util.TrackUtils;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
+import com.google.android.lib.mytracks.content.Waypoint;
+import com.google.android.lib.mytracks.content.WaypointCreationRequest;
+import com.google.android.lib.mytracks.util.FileUtils;
 
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.content.TrackDataHub;
+import br.com.bioscada.apps.biotracks.fragments.ChartAndPacerFragment;
+import br.com.bioscada.apps.biotracks.fragments.ChartFragment;
+import br.com.bioscada.apps.biotracks.fragments.ChooseActivityTypeDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ChooseActivityTypeDialogFragment.ChooseActivityTypeCaller;
+import br.com.bioscada.apps.biotracks.fragments.ExportDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ExportDialogFragment.ExportCaller;
+import br.com.bioscada.apps.biotracks.fragments.ExportDialogFragment.ExportType;
+import br.com.bioscada.apps.biotracks.fragments.MapLayerDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.MyTracksMapFragment;
+import br.com.bioscada.apps.biotracks.fragments.PacerFragment;
+import br.com.bioscada.apps.biotracks.fragments.PlayMultipleDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.PlayMultipleDialogFragment.PlayMultipleCaller;
+import br.com.bioscada.apps.biotracks.fragments.StatsFragment;
+import br.com.bioscada.apps.biotracks.io.file.TrackFileFormat;
+import br.com.bioscada.apps.biotracks.io.file.exporter.SaveActivity;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
+import br.com.bioscada.apps.biotracks.settings.SettingsActivity;
+import br.com.bioscada.apps.biotracks.util.AnalyticsUtils;
+import br.com.bioscada.apps.biotracks.util.ApiAdapterFactory;
+import br.com.bioscada.apps.biotracks.util.CalorieUtils;
+import br.com.bioscada.apps.biotracks.util.CalorieUtils.ActivityType;
+import br.com.bioscada.apps.biotracks.util.IntentUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.TrackIconUtils;
+import br.com.bioscada.apps.biotracks.util.TrackRecordingServiceConnectionUtils;
+import br.com.bioscada.apps.biotracks.util.TrackUtils;
 
 /**
  * An activity to show the track detail.
  * 
  * @author Leif Hendrik Wilden
- * @author Rodrigo Damazio 
- * @author Marlon Moraes 
+ * @author Rodrigo Damazio
  */
 public class TrackDetailActivity extends AbstractSendToGoogleActivity
     implements ChooseActivityTypeCaller, ExportCaller, PlayMultipleCaller {
@@ -106,8 +103,7 @@ public class TrackDetailActivity extends AbstractSendToGoogleActivity
   private TabHost tabHost;
   private ViewPager viewPager;
   private TabsAdapter tabsAdapter;
-  private TrackController trackController; 
-  public static boolean pacerValue; 
+  private TrackController trackController;
 
   // From intent
   private long trackId;
@@ -139,7 +135,7 @@ public class TrackDetailActivity extends AbstractSendToGoogleActivity
           if (hasPhoto && photoUri != null) {
             hasPhoto = false;
             WaypointCreationRequest waypointCreationRequest = new WaypointCreationRequest(
-                WaypointType.WAYPOINT, false, null, null, null, null, photoUri.toString());
+                Waypoint.WaypointType.WAYPOINT, false, null, null, null, null, photoUri.toString());
             long id = TrackRecordingServiceConnectionUtils.addMarker(
                 TrackDetailActivity.this, trackRecordingServiceConnection, waypointCreationRequest);
 
@@ -231,7 +227,7 @@ public class TrackDetailActivity extends AbstractSendToGoogleActivity
     myTracksProviderUtils = MyTracksProviderUtils.Factory.get(this);
     handleIntent(getIntent());
 
-    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, MODE_PRIVATE);
+    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, Context.MODE_PRIVATE);
 
     trackRecordingServiceConnection = new TrackRecordingServiceConnection(
         this, bindChangedCallback);
@@ -242,43 +238,40 @@ public class TrackDetailActivity extends AbstractSendToGoogleActivity
 
     viewPager = (ViewPager) findViewById(R.id.pager);
 
-    tabsAdapter = new TabsAdapter(this, tabHost, viewPager);
+      tabsAdapter = new TabsAdapter(this, tabHost, viewPager);
 
-    TabSpec mapTabSpec = tabHost.newTabSpec(MyTracksMapFragment.MAP_FRAGMENT_TAG).setIndicator(
-        getString(R.string.track_detail_map_tab),
-        getResources().getDrawable(R.drawable.ic_tab_map));
-    tabsAdapter.addTab(mapTabSpec, MyTracksMapFragment.class, null);
- 
-    pacerValue = PreferencesUtils.getBoolean(
-        this, R.string.chart_show_pacer_key, PreferencesUtils.CHART_SHOW_PACER_DEFAULT);
-    
-    if (pacerValue==true){
-      TabSpec chartAndPacerTabSpec = tabHost.newTabSpec(ChartAndPacerFragment.CHART_AND_PACER_FRAGMENT_TAG).setIndicator(
-        getString(R.string.track_detail_chartAndPacer_tab),
-        getResources().getDrawable(R.drawable.ic_tab_chart));
-      tabsAdapter.addTab(chartAndPacerTabSpec, ChartAndPacerFragment.class, null);
-      }       
-    else{
-      TabSpec chartTabSpec = tabHost.newTabSpec(ChartFragment.CHART_FRAGMENT_TAG).setIndicator(
-        getString(R.string.track_detail_chart_tab),
-        getResources().getDrawable(R.drawable.ic_tab_chart));
-      tabsAdapter.addTab(chartTabSpec, ChartFragment.class, null);
-    }
- 
-    TabSpec statsTabSpec = tabHost.newTabSpec(StatsFragment.STATS_FRAGMENT_TAG).setIndicator(
-        getString(R.string.track_detail_stats_tab),
-        getResources().getDrawable(R.drawable.ic_tab_stats));
-    tabsAdapter.addTab(statsTabSpec, StatsFragment.class, null);
-    
-    TabSpec pacerTabSpec = tabHost.newTabSpec(PacerFragment.PACER_FRAGMENT_TAG).setIndicator(
-        getString(R.string.track_detail_pacer_tab),
-        getResources().getDrawable(R.drawable.ic_tab_pacer));
-    tabsAdapter.addTab(pacerTabSpec, PacerFragment.class, null);
- 
-    if (savedInstanceState != null) {
+      TabSpec mapTabSpec = tabHost.newTabSpec(MyTracksMapFragment.MAP_FRAGMENT_TAG).setIndicator(
+              getString(R.string.track_detail_map_tab),
+              getResources().getDrawable(R.drawable.ic_tab_map));
+      tabsAdapter.addTab(mapTabSpec, MyTracksMapFragment.class, null);
+
+      if (PreferencesUtils.getBoolean( this, R.string.chart_show_pacer_key, PreferencesUtils.CHART_SHOW_PACER_DEFAULT)){
+          TabSpec chartAndPacerTabSpec = tabHost.newTabSpec(ChartAndPacerFragment.CHART_AND_PACER_FRAGMENT_TAG).setIndicator(
+                  getString(R.string.track_detail_chart_and_pacer_tab),
+                  getResources().getDrawable(R.drawable.ic_tab_chart));
+          tabsAdapter.addTab(chartAndPacerTabSpec, ChartAndPacerFragment.class, null);
+      }
+
+          TabSpec chartTabSpec = tabHost.newTabSpec(ChartFragment.CHART_FRAGMENT_TAG).setIndicator(
+                  getString(R.string.track_detail_chart_tab),
+                  getResources().getDrawable(R.drawable.ic_tab_chart));
+          tabsAdapter.addTab(chartTabSpec, ChartFragment.class, null);
+
+
+      TabSpec statsTabSpec = tabHost.newTabSpec(StatsFragment.STATS_FRAGMENT_TAG).setIndicator(
+              getString(R.string.track_detail_stats_tab),
+              getResources().getDrawable(R.drawable.ic_tab_stats));
+      tabsAdapter.addTab(statsTabSpec, StatsFragment.class, null);
+
+      TabSpec pacerTabSpec = tabHost.newTabSpec(PacerFragment.PACER_FRAGMENT_TAG).setIndicator(
+              getString(R.string.track_detail_pacer_tab),
+              getResources().getDrawable(R.drawable.ic_tab_pacer));
+      tabsAdapter.addTab(pacerTabSpec, PacerFragment.class, null);
+
+      if (savedInstanceState != null) {
       tabHost.setCurrentTabByTag(savedInstanceState.getString(CURRENT_TAB_TAG_KEY));
     }
-    
+
     // Set the background after all three tabs are added
     ApiAdapterFactory.getApiAdapter().setTabBackground(tabHost.getTabWidget());
     
@@ -396,8 +389,6 @@ public class TrackDetailActivity extends AbstractSendToGoogleActivity
     shareMenuItem.setVisible(!isSharedWithMe);
 
     exportMenuItem = menu.findItem(R.id.track_detail_export);
-    voiceFrequencyMenuItem = menu.findItem(R.id.track_detail_voice_frequency);
-    splitFrequencyMenuItem = menu.findItem(R.id.track_detail_split_frequency);
     sensorStateMenuItem = menu.findItem(R.id.track_detail_sensor_state);
     return super.onCreateOptionsMenu(menu);
   }
@@ -449,16 +440,6 @@ public class TrackDetailActivity extends AbstractSendToGoogleActivity
       case R.id.track_detail_play_multiple:
         PlayMultipleDialogFragment.newInstance(trackId)
             .show(getSupportFragmentManager(), PlayMultipleDialogFragment.PLAY_MULTIPLE_DIALOG_TAG);
-        return true;
-      case R.id.track_detail_voice_frequency:
-        FrequencyDialogFragment.newInstance(R.string.voice_frequency_key,
-            PreferencesUtils.VOICE_FREQUENCY_DEFAULT, R.string.menu_voice_frequency)
-            .show(getSupportFragmentManager(), FrequencyDialogFragment.FREQUENCY_DIALOG_TAG);
-        return true;
-      case R.id.track_detail_split_frequency:
-        FrequencyDialogFragment.newInstance(R.string.split_frequency_key,
-            PreferencesUtils.SPLIT_FREQUENCY_DEFAULT, R.string.menu_split_frequency)
-            .show(getSupportFragmentManager(), FrequencyDialogFragment.FREQUENCY_DIALOG_TAG);
         return true;
       case R.id.track_detail_export:
         Track track = myTracksProviderUtils.getTrack(trackId);
@@ -659,23 +640,5 @@ public class TrackDetailActivity extends AbstractSendToGoogleActivity
   public void showMapLayerDialog() {
     new MapLayerDialogFragment().show(
         getSupportFragmentManager(), MapLayerDialogFragment.MAP_LAYER_DIALOG_TAG);
-  } 
-  
-  @Override
-  public void onRestart() { 
-      super.onRestart();
-      //When BACK BUTTON is pressed, the activity on the stack is restarted
-            
-      boolean newPacerValue = PreferencesUtils.getBoolean(
-          this, R.string.chart_show_pacer_key, PreferencesUtils.CHART_SHOW_PACER_DEFAULT);
-      
-      if(pacerValue!=newPacerValue){
-        Intent intent = getIntent();
-        finish();
-        startActivity(intent);                           
-      }
-      else
-        pacerValue=newPacerValue;    
-  }     
- 
-} 
+  }
+}

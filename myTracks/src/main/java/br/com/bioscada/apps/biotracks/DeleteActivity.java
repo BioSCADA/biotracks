@@ -22,9 +22,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.apps.mytracks.util.DialogUtils;
-
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.util.DialogUtils;
 
 /**
  * An activity for delete tracks.

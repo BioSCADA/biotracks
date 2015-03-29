@@ -22,28 +22,26 @@ import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.location.Location;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.content.Waypoint;
-import com.google.android.apps.mytracks.content.Waypoint.WaypointType;
-import com.google.android.apps.mytracks.maps.TrackPath;
-import com.google.android.apps.mytracks.maps.TrackPathFactory;
-import com.google.android.apps.mytracks.stats.TripStatistics;
-import com.google.android.apps.mytracks.util.LocationUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.UnitConversions;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
+import com.google.android.lib.mytracks.content.Waypoint;
+import com.google.android.lib.mytracks.stats.TripStatistics;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.maps.TrackPath;
+import br.com.bioscada.apps.biotracks.maps.TrackPathFactory;
+import br.com.bioscada.apps.biotracks.util.LocationUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.UnitConversions;
 
-import static com.google.android.apps.mytracks.content.TrackDataHub.TARGET_DISPLAYED_TRACK_POINTS;
+import static br.com.bioscada.apps.biotracks.content.TrackDataHub.TARGET_DISPLAYED_TRACK_POINTS;
 
 /**
  * A map overlay that displays my location arrow, error circle, and track info.
@@ -290,7 +288,7 @@ public class MapOverlay {
       for (Waypoint waypoint : waypoints) {
         Location location = waypoint.getLocation();
         LatLng latLng = new LatLng(location.getLatitude(), location.getLongitude());
-        int drawableId = waypoint.getType() == WaypointType.STATISTICS 
+        int drawableId = waypoint.getType() == Waypoint.WaypointType.STATISTICS
             ? R.drawable.ic_marker_yellow_pushpin : R.drawable.ic_marker_blue_pushpin;
         MarkerOptions markerOptions = new MarkerOptions().position(latLng)
             .anchor(WAYPOINT_X_ANCHOR, WAYPOINT_Y_ANCHOR).draggable(false).visible(true)

@@ -48,45 +48,43 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.content.TracksColumns;
-import com.google.android.apps.mytracks.fragments.ChooseAccountDialogFragment;
-import com.google.android.apps.mytracks.fragments.ChooseAccountDialogFragment.ChooseAccountCaller;
-import com.google.android.apps.mytracks.fragments.ConfirmSyncDialogFragment;
-import com.google.android.apps.mytracks.fragments.ConfirmSyncDialogFragment.ConfirmSyncCaller;
-import com.google.android.apps.mytracks.fragments.EulaDialogFragment;
-import com.google.android.apps.mytracks.fragments.EulaDialogFragment.EulaCaller;
-import com.google.android.apps.mytracks.fragments.FileTypeDialogFragment;
-import com.google.android.apps.mytracks.fragments.FileTypeDialogFragment.FileTypeCaller;
-import com.google.android.apps.mytracks.fragments.PlayMultipleDialogFragment;
-import com.google.android.apps.mytracks.fragments.PlayMultipleDialogFragment.PlayMultipleCaller;
-import com.google.android.apps.mytracks.io.file.TrackFileFormat;
-import com.google.android.apps.mytracks.io.file.exporter.SaveActivity;
-import com.google.android.apps.mytracks.io.file.importer.ImportActivity;
-import com.google.android.apps.mytracks.io.sync.SyncUtils;
-import com.google.android.apps.mytracks.services.ITrackRecordingService;
-import com.google.android.apps.mytracks.services.MyTracksLocationManager;
-import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
-import com.google.android.apps.mytracks.settings.SettingsActivity;
-import com.google.android.apps.mytracks.util.AnalyticsUtils;
-import com.google.android.apps.mytracks.util.ApiAdapterFactory;
-import com.google.android.apps.mytracks.util.EulaUtils;
-import com.google.android.apps.mytracks.util.GoogleLocationUtils;
-import com.google.android.apps.mytracks.util.IntentUtils;
-import com.google.android.apps.mytracks.util.ListItemUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.StringUtils;
-import com.google.android.apps.mytracks.util.TrackIconUtils;
-import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
-import com.google.android.apps.mytracks.util.TrackUtils;
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
+import com.google.android.lib.mytracks.content.TracksColumns;
+import com.google.android.lib.mytracks.services.ITrackRecordingService;
 
 import java.util.Locale;
 
-import br.com.bioscada.apps.biotracks.BuildConfig;
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.fragments.ChooseAccountDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ChooseAccountDialogFragment.ChooseAccountCaller;
+import br.com.bioscada.apps.biotracks.fragments.ConfirmSyncDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ConfirmSyncDialogFragment.ConfirmSyncCaller;
+import br.com.bioscada.apps.biotracks.fragments.EulaDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.EulaDialogFragment.EulaCaller;
+import br.com.bioscada.apps.biotracks.fragments.FileTypeDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.FileTypeDialogFragment.FileTypeCaller;
+import br.com.bioscada.apps.biotracks.fragments.PlayMultipleDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.PlayMultipleDialogFragment.PlayMultipleCaller;
+import br.com.bioscada.apps.biotracks.io.file.TrackFileFormat;
+import br.com.bioscada.apps.biotracks.io.file.exporter.SaveActivity;
+import br.com.bioscada.apps.biotracks.io.file.importer.ImportActivity;
+import br.com.bioscada.apps.biotracks.io.sync.SyncUtils;
+import br.com.bioscada.apps.biotracks.services.MyTracksLocationManager;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
+import br.com.bioscada.apps.biotracks.settings.SettingsActivity;
+import br.com.bioscada.apps.biotracks.util.AnalyticsUtils;
+import br.com.bioscada.apps.biotracks.util.ApiAdapterFactory;
+import br.com.bioscada.apps.biotracks.util.EulaUtils;
+import br.com.bioscada.apps.biotracks.util.GoogleLocationUtils;
+import br.com.bioscada.apps.biotracks.util.IntentUtils;
+import br.com.bioscada.apps.biotracks.util.ListItemUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.StringUtils;
+import br.com.bioscada.apps.biotracks.util.TrackIconUtils;
+import br.com.bioscada.apps.biotracks.util.TrackRecordingServiceConnectionUtils;
+import br.com.bioscada.apps.biotracks.util.TrackUtils;
 
 /**
  * An activity displaying a list of tracks.
@@ -328,7 +326,7 @@ public class TrackListActivity extends AbstractSendToGoogleActivity
     }
 
     myTracksProviderUtils = MyTracksProviderUtils.Factory.get(this);
-    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, MODE_PRIVATE);
+    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, Context.MODE_PRIVATE);
 
     trackRecordingServiceConnection = new TrackRecordingServiceConnection(
         this, bindChangedCallback);

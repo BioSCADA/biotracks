@@ -16,7 +16,7 @@
 
 package br.com.bioscada.apps.biotracks;
 
-import com.google.android.apps.mytracks.stats.TripStatistics;
+import com.google.android.lib.mytracks.stats.TripStatistics;
 
 /**
  * An interface for classes which describe how to draw a track path.

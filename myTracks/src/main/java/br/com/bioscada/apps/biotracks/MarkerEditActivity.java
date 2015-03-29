@@ -25,16 +25,14 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.content.Waypoint;
-import com.google.android.apps.mytracks.content.Waypoint.WaypointType;
-import com.google.android.apps.mytracks.content.WaypointCreationRequest;
-import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
+import com.google.android.lib.mytracks.content.Waypoint;
+import com.google.android.lib.mytracks.content.WaypointCreationRequest;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.TrackRecordingServiceConnectionUtils;
 
 /**
  * An activity to add/edit a marker.
@@ -145,7 +143,7 @@ public class MarkerEditActivity extends AbstractMyTracksActivity {
       statisticsSection.setVisibility(View.GONE);
       waypointSection.setVisibility(View.VISIBLE);
       int nextWaypointNumber = trackId == -1L ? -1
-          : MyTracksProviderUtils.Factory.get(this).getNextWaypointNumber(trackId, WaypointType.WAYPOINT);
+          : MyTracksProviderUtils.Factory.get(this).getNextWaypointNumber(trackId, Waypoint.WaypointType.WAYPOINT);
       if (nextWaypointNumber == -1) {
         nextWaypointNumber = 0;
       }
@@ -160,7 +158,7 @@ public class MarkerEditActivity extends AbstractMyTracksActivity {
         finish();
         return;
       }
-      boolean statistics = waypoint.getType() == WaypointType.STATISTICS;
+      boolean statistics = waypoint.getType() == Waypoint.WaypointType.STATISTICS;
       statisticsSection.setVisibility(statistics ? View.VISIBLE : View.GONE);
       waypointSection.setVisibility(statistics ? View.GONE : View.VISIBLE);
       if (statistics) {
@@ -178,7 +176,7 @@ public class MarkerEditActivity extends AbstractMyTracksActivity {
    */
   private void addMarker() {
     WaypointCreationRequest waypointCreationRequest = new WaypointCreationRequest(
-        WaypointType.WAYPOINT,
+        Waypoint.WaypointType.WAYPOINT,
         false,
         waypointName.getText().toString(),
         waypointMarkerType.getText().toString(),
@@ -193,7 +191,7 @@ public class MarkerEditActivity extends AbstractMyTracksActivity {
    * Saves a marker.
    */
   private void saveMarker() {
-    boolean statistics = waypoint.getType() == WaypointType.STATISTICS;
+    boolean statistics = waypoint.getType() == Waypoint.WaypointType.STATISTICS;
     if (statistics) {
       waypoint.setName(statisticsName.getText().toString());
     } else {

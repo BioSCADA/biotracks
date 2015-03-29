@@ -41,110 +41,110 @@ import java.util.ArrayList;
  * the ViewPager whenever the selected tab changes.
  * <p>
  * Copied from the FragmentTabsPager sample in the support library.
- * 
+ *
  * @author Jimmy Shih
  */
 public class TabsAdapter extends FragmentPagerAdapter
-    implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener {
-
-  private final Context context;
-  private final TabHost tabHost;
-  private final ViewPager viewPager;
-  private final ArrayList<TabInfo> tabInfos = new ArrayList<TabInfo>();
-
-  /**
-   * An object to hold a tab's info.
-   * 
-   * @author Jimmy Shih
-   */
-  private static final class TabInfo {
-
-    private final Class<?> clss;
-    private final Bundle bundle;
-
-    public TabInfo(Class<?> clss, Bundle bunlde) {
-      this.clss = clss;
-      this.bundle = bunlde;
-    }
-  }
-
-  /**
-   * A dummy {@link TabContentFactory} that creates an empty view to satisfy the
-   * {@link TabHost} API.
-   * 
-   * @author Jimmy Shih
-   */
-  private static class DummyTabFactory implements TabHost.TabContentFactory {
+        implements TabHost.OnTabChangeListener, ViewPager.OnPageChangeListener {
 
     private final Context context;
+    private final TabHost tabHost;
+    private final ViewPager viewPager;
+    private final ArrayList<TabInfo> tabInfos = new ArrayList<TabInfo>();
 
-    public DummyTabFactory(Context context) {
-      this.context = context;
+    /**
+     * An object to hold a tab's info.
+     *
+     * @author Jimmy Shih
+     */
+    private static final class TabInfo {
+
+        private final Class<?> clss;
+        private final Bundle bundle;
+
+        public TabInfo(Class<?> clss, Bundle bunlde) {
+            this.clss = clss;
+            this.bundle = bunlde;
+        }
+    }
+
+    /**
+     * A dummy {@link TabContentFactory} that creates an empty view to satisfy the
+     * {@link TabHost} API.
+     *
+     * @author Jimmy Shih
+     */
+    private static class DummyTabFactory implements TabHost.TabContentFactory {
+
+        private final Context context;
+
+        public DummyTabFactory(Context context) {
+            this.context = context;
+        }
+
+        @Override
+        public View createTabContent(String tag) {
+            View view = new View(context);
+            view.setMinimumWidth(0);
+            view.setMinimumHeight(0);
+            return view;
+        }
+    }
+
+    public TabsAdapter(FragmentActivity activity, TabHost tabHost, ViewPager viewPager) {
+        super(activity.getSupportFragmentManager());
+        this.context = activity;
+        this.tabHost = tabHost;
+        this.viewPager = viewPager;
+        this.tabHost.setOnTabChangedListener(this);
+        this.viewPager.setAdapter(this);
+        this.viewPager.setOnPageChangeListener(this);
+    }
+
+    public void addTab(TabHost.TabSpec tabSpec, Class<?> clss, Bundle bundle) {
+        tabSpec.setContent(new DummyTabFactory(context));
+
+        TabInfo info = new TabInfo(clss, bundle);
+
+        tabInfos.add(info);
+        tabHost.addTab(tabSpec);
+        notifyDataSetChanged();
     }
 
     @Override
-    public View createTabContent(String tag) {
-      View view = new View(context);
-      view.setMinimumWidth(0);
-      view.setMinimumHeight(0);
-      return view;
+    public int getCount() {
+        return tabInfos.size();
     }
-  }
 
-  public TabsAdapter(FragmentActivity activity, TabHost tabHost, ViewPager viewPager) {
-    super(activity.getSupportFragmentManager());
-    this.context = activity;
-    this.tabHost = tabHost;
-    this.viewPager = viewPager;
-    this.tabHost.setOnTabChangedListener(this);
-    this.viewPager.setAdapter(this);
-    this.viewPager.setOnPageChangeListener(this);
-  }
+    @Override
+    public Fragment getItem(int position) {
+        TabInfo info = tabInfos.get(position);
+        return Fragment.instantiate(context, info.clss.getName(), info.bundle);
+    }
 
-  public void addTab(TabHost.TabSpec tabSpec, Class<?> clss, Bundle bundle) {
-    tabSpec.setContent(new DummyTabFactory(context));
+    @Override
+    public void onTabChanged(String tabId) {
+        int position = tabHost.getCurrentTab();
+        viewPager.setCurrentItem(position);
+    }
 
-    TabInfo info = new TabInfo(clss, bundle);
-    
-    tabInfos.add(info);
-    tabHost.addTab(tabSpec);
-    notifyDataSetChanged();
-  }
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
 
-  @Override
-  public int getCount() {
-    return tabInfos.size();
-  }
-
-  @Override
-  public Fragment getItem(int position) {
-    TabInfo info = tabInfos.get(position);
-    return Fragment.instantiate(context, info.clss.getName(), info.bundle);
-  }
-
-  @Override
-  public void onTabChanged(String tabId) {
-    int position = tabHost.getCurrentTab();
-    viewPager.setCurrentItem(position);
-  }
-
-  @Override
-  public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
-
-  @Override
-  public void onPageSelected(int position) {
+    @Override
+    public void onPageSelected(int position) {
     /*
      * Unfortunately when TabHost changes the current tab, it kindly also takes
      * care of putting focus on it when not in touch mode. The jerk. This hack
      * tries to prevent this from pulling focus out of our ViewPager.
      */
-    TabWidget tabWidget = tabHost.getTabWidget();
-    int oldFocusability = tabWidget.getDescendantFocusability();
-    tabWidget.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
-    tabHost.setCurrentTab(position);
-    tabWidget.setDescendantFocusability(oldFocusability);
-  }
+        TabWidget tabWidget = tabHost.getTabWidget();
+        int oldFocusability = tabWidget.getDescendantFocusability();
+        tabWidget.setDescendantFocusability(ViewGroup.FOCUS_BLOCK_DESCENDANTS);
+        tabHost.setCurrentTab(position);
+        tabWidget.setDescendantFocusability(oldFocusability);
+    }
 
-  @Override
-  public void onPageScrollStateChanged(int state) {}
+    @Override
+    public void onPageScrollStateChanged(int state) {}
 }

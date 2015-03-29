@@ -19,13 +19,12 @@ package br.com.bioscada.apps.biotracks;
 import android.content.Context;
 import android.os.AsyncTask;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.io.sync.SyncUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.UnitConversions;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.io.sync.SyncUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.UnitConversions;
 
 /**
  * Async Task to delete tracks.

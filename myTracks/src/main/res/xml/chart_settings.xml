@@ -15,50 +15,50 @@ See the License for the specific language governing permissions and
 limitations under the License.
 -->
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-  android:title="@string/track_detail_chart_tab" >
-  <com.google.android.apps.mytracks.settings.MyTracksListPreference
-    android:defaultValue="@string/chart_x_axis_distance"
-    android:key="@string/chart_x_axis_key"
-    android:title="@string/settings_chart_x_axis" />
-  <PreferenceCategory android:title="@string/settings_show" >
-    <CheckBoxPreference
-      android:defaultValue="true"
-      android:key="@string/chart_show_elevation_key"
-      android:title="@string/stats_elevation" />
-    <CheckBoxPreference
-      android:defaultValue="true"
-      android:key="@string/chart_show_speed_key" />
-    <CheckBoxPreference
-      android:defaultValue="true"
-      android:key="@string/chart_show_heart_rate_key"
-      android:title="@string/sensor_state_heart_rate" />
-      <CheckBoxPreference
-          android:defaultValue="true"
-          android:key="@string/chart_show_bpm_key"
-          android:title="@string/sensor_state_heart_rate_bpm" />
-      <CheckBoxPreference
-          android:defaultValue="true"
-          android:key="@string/chart_show_rmssd_key"
-          android:title="@string/sensor_state_heart_rate_rmssd" />
-    <CheckBoxPreference
-      android:defaultValue="true"
-      android:key="@string/chart_show_attention_key"
-      android:title="@string/sensor_state_attention" />
-    <CheckBoxPreference
-      android:defaultValue="true"
-      android:key="@string/chart_show_meditation_key"
-      android:title="@string/sensor_state_meditation" />
-    <CheckBoxPreference
-      android:defaultValue="true"
-      android:key="@string/chart_show_cadence_key"
-      android:title="@string/sensor_state_cadence" />
-    <CheckBoxPreference
-      android:defaultValue="true"
-      android:key="@string/chart_show_power_key"
-      android:title="@string/sensor_state_power" />
-     <CheckBoxPreference
-      android:defaultValue="false"
-      android:key="@string/chart_show_pacer_key"
-      android:title="@string/sensor_state_pacer" /> 
-  </PreferenceCategory>
+    android:title="@string/track_detail_chart_tab" >
+    <br.com.bioscada.apps.biotracks.settings.MyTracksListPreference
+        android:defaultValue="@string/chart_x_axis_time"
+        android:key="@string/chart_x_axis_key"
+        android:title="@string/settings_chart_x_axis" />
+    <PreferenceCategory android:title="@string/settings_show" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_elevation_key"
+            android:title="@string/stats_elevation" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_speed_key" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_heart_rate_key"
+            android:title="@string/sensor_state_heart_rate" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_bpm_key"
+            android:title="@string/sensor_state_heart_rate_bpm" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_rmssd_key"
+            android:title="@string/sensor_state_heart_rate_rmssd" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_attention_key"
+            android:title="@string/sensor_state_attention" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_meditation_key"
+            android:title="@string/sensor_state_meditation" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_cadence_key"
+            android:title="@string/sensor_state_cadence" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/chart_show_power_key"
+            android:title="@string/sensor_state_power" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="@string/chart_show_pacer_key"
+            android:title="@string/sensor_state_pacer" />
+    </PreferenceCategory>
 </PreferenceScreen>

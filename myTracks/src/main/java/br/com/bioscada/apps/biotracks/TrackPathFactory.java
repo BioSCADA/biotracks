@@ -19,8 +19,6 @@ package br.com.bioscada.apps.biotracks;
 
 import android.content.Context;
 
-import br.com.bioscada.apps.biotracks.R;
-
 /**
  * A factory for {@link TrackPath}.
  * 

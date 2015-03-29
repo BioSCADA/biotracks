@@ -24,9 +24,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.google.android.apps.mytracks.content.TracksColumns;
+import com.google.android.lib.mytracks.content.TracksColumns;
 
-import br.com.bioscada.apps.biotracks.R;
 
 /**
  * A section based resource cursor adapter. Currently only supports one

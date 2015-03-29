@@ -20,7 +20,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.services.TrackRecordingService;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingService;
 
 import static android.content.Intent.ACTION_BOOT_COMPLETED;
 

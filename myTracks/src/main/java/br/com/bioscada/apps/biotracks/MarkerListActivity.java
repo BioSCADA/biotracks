@@ -38,18 +38,17 @@ import android.widget.AdapterView.AdapterContextMenuInfo;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.content.Waypoint.WaypointType;
-import com.google.android.apps.mytracks.content.WaypointsColumns;
-import com.google.android.apps.mytracks.fragments.DeleteMarkerDialogFragment;
-import com.google.android.apps.mytracks.fragments.DeleteMarkerDialogFragment.DeleteMarkerCaller;
-import com.google.android.apps.mytracks.util.ApiAdapterFactory;
-import com.google.android.apps.mytracks.util.IntentUtils;
-import com.google.android.apps.mytracks.util.ListItemUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
+import com.google.android.lib.mytracks.content.Waypoint;
+import com.google.android.lib.mytracks.content.WaypointsColumns;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.fragments.DeleteMarkerDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.DeleteMarkerDialogFragment.DeleteMarkerCaller;
+import br.com.bioscada.apps.biotracks.util.ApiAdapterFactory;
+import br.com.bioscada.apps.biotracks.util.IntentUtils;
+import br.com.bioscada.apps.biotracks.util.ListItemUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
 
 /**
  * Activity to show a list of markers in a track.
@@ -148,7 +147,7 @@ public class MarkerListActivity extends AbstractMyTracksActivity implements Dele
     super.onCreate(savedInstanceState);
 
     myTracksProviderUtils = MyTracksProviderUtils.Factory.get(this);
-    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, MODE_PRIVATE);
+    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, Context.MODE_PRIVATE);
     long trackId = getIntent().getLongExtra(EXTRA_TRACK_ID, -1L);
     if (trackId == -1L) {
       Log.d(TAG, "invalid track id");
@@ -179,8 +178,8 @@ public class MarkerListActivity extends AbstractMyTracksActivity implements Dele
         int descriptionIndex = cursor.getColumnIndex(WaypointsColumns.DESCRIPTION);
         int photoUrlIndex = cursor.getColumnIndex(WaypointsColumns.PHOTOURL);
 
-        boolean statistics = WaypointType.values()[cursor.getInt(typeIndex)]
-            == WaypointType.STATISTICS;
+        boolean statistics = Waypoint.WaypointType.values()[cursor.getInt(typeIndex)]
+            == Waypoint.WaypointType.STATISTICS;
         int iconId = statistics ? R.drawable.ic_marker_yellow_pushpin
             : R.drawable.ic_marker_blue_pushpin;
         String name = cursor.getString(nameIndex);

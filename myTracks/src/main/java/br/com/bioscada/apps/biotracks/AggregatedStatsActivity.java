@@ -18,15 +18,14 @@ package br.com.bioscada.apps.biotracks;
 
 import android.os.Bundle;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.stats.TripStatistics;
-import com.google.android.apps.mytracks.util.CalorieUtils.ActivityType;
-import com.google.android.apps.mytracks.util.StatsUtils;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
+import com.google.android.lib.mytracks.stats.TripStatistics;
 
 import java.util.List;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.util.CalorieUtils.ActivityType;
+import br.com.bioscada.apps.biotracks.util.StatsUtils;
 
 /**
  * An activity to view aggregated stats from all recorded tracks.

@@ -22,8 +22,8 @@ import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.google.android.apps.mytracks.util.ApiAdapterFactory;
-import com.google.android.apps.mytracks.util.TrackIconUtils;
+import br.com.bioscada.apps.biotracks.util.ApiAdapterFactory;
+import br.com.bioscada.apps.biotracks.util.TrackIconUtils;
 
 /**
  * An abstract class for all My Tracks activities.

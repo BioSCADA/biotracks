@@ -27,15 +27,13 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 
-import com.google.android.apps.mytracks.fragments.EulaDialogFragment;
-import com.google.android.apps.mytracks.fragments.EulaDialogFragment.EulaCaller;
-import com.google.android.apps.mytracks.util.ApiAdapterFactory;
-import com.google.android.apps.mytracks.util.GoogleFeedbackUtils;
-import com.google.android.apps.mytracks.util.SystemUtils;
-
 import java.util.Locale;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.fragments.EulaDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.EulaDialogFragment.EulaCaller;
+import br.com.bioscada.apps.biotracks.util.ApiAdapterFactory;
+import br.com.bioscada.apps.biotracks.util.GoogleFeedbackUtils;
+import br.com.bioscada.apps.biotracks.util.SystemUtils;
 
 /**
  * An activity that displays the help page.
@@ -117,7 +115,8 @@ public class HelpActivity extends AbstractMyTracksActivity implements EulaCaller
         return true;
       case R.id.help_forum:
         intent = new Intent(Intent.ACTION_VIEW);
-        intent.setData(Uri.parse( "https://bioscada.me"));
+        intent.setData(Uri.parse(
+            "http://groups.google.com/a/googleproductforums.com/forum/#!categories/maps/mytracks/"));
         startActivity(intent);
         return true;
       default:

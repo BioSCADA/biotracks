@@ -12,7 +12,7 @@
 // License for the specific language governing permissions and limitations under
 // the License.
 
-package com.google.android.apps.mytracks.content;
+package com.google.android.lib.mytracks.content;
 
 option optimize_for = LITE_RUNTIME;
 

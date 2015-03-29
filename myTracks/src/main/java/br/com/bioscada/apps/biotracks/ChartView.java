@@ -33,18 +33,16 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.widget.Scroller;
 
-import com.google.android.apps.mytracks.content.Waypoint;
-import com.google.android.apps.mytracks.content.Waypoint.WaypointType;
-import com.google.android.apps.mytracks.stats.ExtremityMonitor;
-import com.google.android.apps.mytracks.util.IntentUtils;
-import com.google.android.apps.mytracks.util.StringUtils;
-import com.google.android.apps.mytracks.util.UnitConversions;
+import com.google.android.lib.mytracks.content.Waypoint;
+import com.google.android.lib.mytracks.stats.ExtremityMonitor;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.util.IntentUtils;
+import br.com.bioscada.apps.biotracks.util.StringUtils;
+import br.com.bioscada.apps.biotracks.util.UnitConversions;
 
 /**
  * Visualization of the chart.
@@ -607,7 +605,7 @@ public class ChartView extends View {
             x, topBorder + spacer + markerHeight / 2, x, topBorder + effectiveHeight, markerPaint);
         canvas.translate(
             x - (float) (markerWidth * MapOverlay.WAYPOINT_X_ANCHOR), topBorder + spacer);
-        if (waypoints.get(i).getType() == WaypointType.STATISTICS) {
+        if (waypoints.get(i).getType() == Waypoint.WaypointType.STATISTICS) {
           statisticsMarker.draw(canvas);
         } else {
           waypointMarker.draw(canvas);

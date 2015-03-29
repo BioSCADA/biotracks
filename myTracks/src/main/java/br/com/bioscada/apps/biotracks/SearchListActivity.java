@@ -17,6 +17,7 @@
 package br.com.bioscada.apps.biotracks;
 
 import android.app.SearchManager;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
@@ -37,27 +38,11 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.SearchEngine;
-import com.google.android.apps.mytracks.content.SearchEngine.ScoredResult;
-import com.google.android.apps.mytracks.content.SearchEngine.SearchQuery;
-import com.google.android.apps.mytracks.content.SearchEngineProvider;
-import com.google.android.apps.mytracks.content.Track;
-import com.google.android.apps.mytracks.content.Waypoint;
-import com.google.android.apps.mytracks.content.Waypoint.WaypointType;
-import com.google.android.apps.mytracks.fragments.DeleteMarkerDialogFragment;
-import com.google.android.apps.mytracks.fragments.DeleteMarkerDialogFragment.DeleteMarkerCaller;
-import com.google.android.apps.mytracks.services.MyTracksLocationManager;
-import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
-import com.google.android.apps.mytracks.stats.TripStatistics;
-import com.google.android.apps.mytracks.util.ApiAdapterFactory;
-import com.google.android.apps.mytracks.util.IntentUtils;
-import com.google.android.apps.mytracks.util.ListItemUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.StringUtils;
-import com.google.android.apps.mytracks.util.TrackIconUtils;
-import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
 import com.google.android.gms.location.LocationListener;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Track;
+import com.google.android.lib.mytracks.content.Waypoint;
+import com.google.android.lib.mytracks.stats.TripStatistics;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -66,7 +51,21 @@ import java.util.List;
 import java.util.Map;
 import java.util.SortedSet;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.content.SearchEngine;
+import br.com.bioscada.apps.biotracks.content.SearchEngine.ScoredResult;
+import br.com.bioscada.apps.biotracks.content.SearchEngine.SearchQuery;
+import br.com.bioscada.apps.biotracks.content.SearchEngineProvider;
+import br.com.bioscada.apps.biotracks.fragments.DeleteMarkerDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.DeleteMarkerDialogFragment.DeleteMarkerCaller;
+import br.com.bioscada.apps.biotracks.services.MyTracksLocationManager;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
+import br.com.bioscada.apps.biotracks.util.ApiAdapterFactory;
+import br.com.bioscada.apps.biotracks.util.IntentUtils;
+import br.com.bioscada.apps.biotracks.util.ListItemUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.StringUtils;
+import br.com.bioscada.apps.biotracks.util.TrackIconUtils;
+import br.com.bioscada.apps.biotracks.util.TrackRecordingServiceConnectionUtils;
 
 /**
  * An activity to display a list of search results.
@@ -190,7 +189,7 @@ public class SearchListActivity extends AbstractSendToGoogleActivity implements 
     setDefaultKeyMode(DEFAULT_KEYS_SEARCH_LOCAL);
 
     myTracksProviderUtils = MyTracksProviderUtils.Factory.get(this);
-    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, MODE_PRIVATE);
+    sharedPreferences = getSharedPreferences(Constants.SETTINGS_NAME, Context.MODE_PRIVATE);
     trackRecordingServiceConnection = new TrackRecordingServiceConnection(this, null);
     searchEngine = new SearchEngine(myTracksProviderUtils);
     searchRecentSuggestions = SearchEngineProvider.newHelper(this);
@@ -481,7 +480,7 @@ public class SearchListActivity extends AbstractSendToGoogleActivity implements 
       }
     }
 
-    boolean statistics = waypoint.getType() == WaypointType.STATISTICS;
+    boolean statistics = waypoint.getType() == Waypoint.WaypointType.STATISTICS;
 
     resultMap.put(IS_RECORDING_FIELD, false);
     resultMap.put(IS_PAUSED_FIELD, true);

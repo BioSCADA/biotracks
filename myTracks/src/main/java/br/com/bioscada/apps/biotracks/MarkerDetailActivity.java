@@ -24,14 +24,13 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 
-import com.google.android.apps.mytracks.content.MyTracksProviderUtils;
-import com.google.android.apps.mytracks.content.Waypoint;
-import com.google.android.apps.mytracks.fragments.DeleteMarkerDialogFragment.DeleteMarkerCaller;
-import com.google.android.apps.mytracks.fragments.MarkerDetailFragment;
+import com.google.android.lib.mytracks.content.MyTracksProviderUtils;
+import com.google.android.lib.mytracks.content.Waypoint;
 
 import java.util.ArrayList;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.fragments.DeleteMarkerDialogFragment.DeleteMarkerCaller;
+import br.com.bioscada.apps.biotracks.fragments.MarkerDetailFragment;
 
 /**
  * An activity to display marker detail info.

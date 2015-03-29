@@ -23,10 +23,11 @@ import android.graphics.Paint.Align;
 import android.graphics.Paint.Style;
 import android.graphics.Path;
 
-import com.google.android.apps.mytracks.stats.ExtremityMonitor;
+import com.google.android.lib.mytracks.stats.ExtremityMonitor;
 import com.google.common.annotations.VisibleForTesting;
 
 import java.text.NumberFormat;
+
 
 /**
  * This class encapsulates the meta data for one series of the chart values.

@@ -66,28 +66,18 @@ limitations under the License.
     android:orderInCategory="10"
     android:title="@string/menu_delete"/>
   <item
-    android:icon="@drawable/ic_menu_voice_frequency"
-    android:id="@+id/track_detail_voice_frequency"
-    android:orderInCategory="11"
-    android:title="@string/menu_voice_frequency"/>
-  <item
-    android:icon="@drawable/ic_menu_split_frequency"
-    android:id="@+id/track_detail_split_frequency"
-    android:orderInCategory="12"
-    android:title="@string/menu_split_frequency"/>
-  <item
     android:icon="@drawable/ic_menu_sensor_state"
     android:id="@+id/track_detail_sensor_state"
-    android:orderInCategory="13"
+    android:orderInCategory="11"
     android:title="@string/menu_sensor_state"/>
   <item
     android:icon="@drawable/ic_menu_settings"
     android:id="@+id/track_detail_settings"
-    android:orderInCategory="14"
+    android:orderInCategory="12"
     android:title="@string/menu_settings"/>
   <item
     android:icon="@drawable/ic_menu_help_feedback"
     android:id="@+id/track_detail_help_feedback"
-    android:orderInCategory="15"
+    android:orderInCategory="13"
     android:title="@string/menu_help_feedback"/>
 </menu>

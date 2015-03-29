@@ -2,102 +2,18 @@
 <items version="2" >
 
     <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/jackson-core-2.0.5.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3262ffaa644eaa2a42ebbf2eb490bc023645f6f1">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/jackson-core-2.0.5-217bd1899a6cc73ea0b5716c4ff49301d5fd1881.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/gdata-spreadsheet-meta-3.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="446a0fe46f7ac4b697a41a9cfb5984e5afcb0bb9">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-spreadsheet-meta-3.0-7207fa1bafeee739962e90f07ccb285f977c0069.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-play-services.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f0d8e4a84fad131bc291c3c4850afcaa8ba0b299">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-play-services-b54df01cca40918907299442752ebcba9f464e6c.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/exploded-aar/biotracks/myTracksLib/unspecified/classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0b8d558611802d3e99be0eef78bd3b979d3ad230">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/classes-ae710bb5c6901e25698d66df04092e1fc6a49a60.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/gdata-core-1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6ff0dba2ad4e59fdda638b00d6773f3e48b61e16">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-core-1.0-6244f7b299c631a83e16a73188fe3da72428c20e.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/jackson-core-asl-1.9.9.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0b198f9d20dcc5bd2fe211e10f4110639b8243d6">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/jackson-core-asl-1.9.9-5de0bec2d1cbcc4eff6693b9c87187216f169e6e.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/libGoogleAnalytics.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="8d0254fe638021ff2ae4fe5bd53c2937006fdab5">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/libGoogleAnalytics-dca6b2b699606c9db00667d0c98d3b2719a2ad7b.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/android-support-v4.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="bd6479f5dd592790607e0504e66e0f31c2b4d308">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/android-support-v4-95ca339a7db04a367caab82f30ea63706c822f5f.jar" />
-    </item>
-    <item
-        jar="/home/diego/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/2.5.0/a10732c76bfacdbd633a7eb0f7968b1059a65dfa/protobuf-java-2.5.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a10732c76bfacdbd633a7eb0f7968b1059a65dfa">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/protobuf-java-2.5.0-4f00ba9ef1634c8917e30a0b2ecc02c39e32255f.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/gdata-client-1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="b134941c07a26fca300c53139299619d44f82e9b">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-client-1.0-22e58ec81c635d39aa7dfc47d9fee07dfd299c7f.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/jsr305.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="20d240a736e261ebc3f1e9448cb26fd75ba46154">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/jsr305-dcb4e06c4bc27fd79a06d596acc4c94d30e9823b.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f556e9c9c0914c9797ee165efb8d64a8ef11166c">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-services-fusiontables-v1-rev16-1.12.0-beta-d0d350186fd58c2f48d653dd754d6028970c0600.jar" />
-    </item>
-    <item
-        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-api-services-drive-v2-rev30-1.12.0-beta.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d9aae4830e373e7e68975bc2e1a8116816d095b4">
-        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-services-drive-v2-rev30-1.12.0-beta-74bbc90e81deae3f3ab470e632d1c19300b5301e.jar" />
-    </item>
-    <item
         jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-http-client-jackson-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="f8983a933c71ffb89452e01e4927cd8bc9becf43">
         <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-http-client-jackson-1.12.0-beta-7bb8e719e7b4edfba07fd5d71b2712c6cbc68c3d.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/jackson-core-2.0.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3262ffaa644eaa2a42ebbf2eb490bc023645f6f1">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/jackson-core-2.0.5-217bd1899a6cc73ea0b5716c4ff49301d5fd1881.jar" />
     </item>
     <item
         jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-http-client-android-1.12.0-beta.jar"
@@ -142,11 +58,25 @@
         <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/guava-jdk5-13.0-205c394954bba20d368f570500fbbccb9c116ede.jar" />
     </item>
     <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/gdata-spreadsheet-meta-3.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="446a0fe46f7ac4b697a41a9cfb5984e5afcb0bb9">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-spreadsheet-meta-3.0-7207fa1bafeee739962e90f07ccb285f977c0069.jar" />
+    </item>
+    <item
         jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-api-client-android-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="a1f19b7322a3434b9a4a8d3adab3c6e253dc43cf">
         <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-client-android-1.12.0-beta-5e00fcded1dd960a30e5086f229c2e224086f4df.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-play-services.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f0d8e4a84fad131bc291c3c4850afcaa8ba0b299">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-play-services-b54df01cca40918907299442752ebcba9f464e6c.jar" />
     </item>
     <item
         jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-http-client-1.12.0-beta.jar"
@@ -170,6 +100,34 @@
         <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/antlib-67dc743f73bec26d2090772544666cbeea473408.jar" />
     </item>
     <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/exploded-aar/biotracks/myTracksLib/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="c1afe7efa1fcdd485ce580ef1ce6188c06bffddc">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/classes-ae710bb5c6901e25698d66df04092e1fc6a49a60.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/gdata-core-1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6ff0dba2ad4e59fdda638b00d6773f3e48b61e16">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-core-1.0-6244f7b299c631a83e16a73188fe3da72428c20e.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/jackson-core-asl-1.9.9.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0b198f9d20dcc5bd2fe211e10f4110639b8243d6">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/jackson-core-asl-1.9.9-5de0bec2d1cbcc4eff6693b9c87187216f169e6e.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/libGoogleAnalytics.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d0254fe638021ff2ae4fe5bd53c2937006fdab5">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/libGoogleAnalytics-dca6b2b699606c9db00667d0c98d3b2719a2ad7b.jar" />
+    </item>
+    <item
         jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/gson-2.1.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -177,11 +135,53 @@
         <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/gson-2.1-ffe5783f348c55b28684293fb450ffe9c6370abb.jar" />
     </item>
     <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/android-support-v4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="bd6479f5dd592790607e0504e66e0f31c2b4d308">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/android-support-v4-95ca339a7db04a367caab82f30ea63706c822f5f.jar" />
+    </item>
+    <item
+        jar="/home/diego/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/2.5.0/a10732c76bfacdbd633a7eb0f7968b1059a65dfa/protobuf-java-2.5.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a10732c76bfacdbd633a7eb0f7968b1059a65dfa">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/protobuf-java-2.5.0-4f00ba9ef1634c8917e30a0b2ecc02c39e32255f.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/gdata-client-1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b134941c07a26fca300c53139299619d44f82e9b">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-client-1.0-22e58ec81c635d39aa7dfc47d9fee07dfd299c7f.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/jsr305.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="20d240a736e261ebc3f1e9448cb26fd75ba46154">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/jsr305-dcb4e06c4bc27fd79a06d596acc4c94d30e9823b.jar" />
+    </item>
+    <item
         jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-http-client-gson-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="76b9aec3a810b64404a4fda200f0df9fb297c7a7">
         <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-http-client-gson-1.12.0-beta-c6eba0d6e8548bcd500376f9a904a378dc5e5c56.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f556e9c9c0914c9797ee165efb8d64a8ef11166c">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-services-fusiontables-v1-rev16-1.12.0-beta-d0d350186fd58c2f48d653dd754d6028970c0600.jar" />
+    </item>
+    <item
+        jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-api-services-drive-v2-rev30-1.12.0-beta.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d9aae4830e373e7e68975bc2e1a8116816d095b4">
+        <dex dex="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-services-drive-v2-rev30-1.12.0-beta-74bbc90e81deae3f3ab470e632d1c19300b5301e.jar" />
     </item>
     <item
         jar="/home/diego/Documents/MyTracks/biotracks/biotracks/myTracks/libs/google-api-client-1.12.0-beta.jar"

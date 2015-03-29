@@ -22,41 +22,40 @@ import android.accounts.AccountManagerCallback;
 import android.accounts.AccountManagerFuture;
 import android.accounts.AuthenticatorException;
 import android.accounts.OperationCanceledException;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.util.Log;
 import android.widget.Toast;
 
-import com.google.android.apps.mytracks.fragments.ConfirmDeleteDialogFragment;
-import com.google.android.apps.mytracks.fragments.ConfirmDeleteDialogFragment.ConfirmDeleteCaller;
-import com.google.android.apps.mytracks.fragments.ExportDialogFragment.ExportType;
-import com.google.android.apps.mytracks.fragments.InstallEarthDialogFragment;
-import com.google.android.apps.mytracks.fragments.ShareTrackDialogFragment;
-import com.google.android.apps.mytracks.fragments.ShareTrackDialogFragment.ShareTrackCaller;
-import com.google.android.apps.mytracks.io.drive.SendDriveActivity;
-import com.google.android.apps.mytracks.io.file.TrackFileFormat;
-import com.google.android.apps.mytracks.io.file.exporter.SaveActivity;
-import com.google.android.apps.mytracks.io.fusiontables.SendFusionTablesActivity;
-import com.google.android.apps.mytracks.io.gdata.maps.MapsConstants;
-import com.google.android.apps.mytracks.io.maps.SendMapsActivity;
-import com.google.android.apps.mytracks.io.sendtogoogle.SendRequest;
-import com.google.android.apps.mytracks.io.sendtogoogle.SendToGoogleUtils;
-import com.google.android.apps.mytracks.io.sendtogoogle.UploadResultActivity;
-import com.google.android.apps.mytracks.io.spreadsheets.SendSpreadsheetsActivity;
-import com.google.android.apps.mytracks.io.sync.SyncUtils;
-import com.google.android.apps.mytracks.services.TrackRecordingServiceConnection;
-import com.google.android.apps.mytracks.services.tasks.CheckPermissionAsyncTask;
-import com.google.android.apps.mytracks.services.tasks.CheckPermissionAsyncTask.CheckPermissionCaller;
-import com.google.android.apps.mytracks.util.AnalyticsUtils;
-import com.google.android.apps.mytracks.util.GoogleEarthUtils;
-import com.google.android.apps.mytracks.util.IntentUtils;
-import com.google.android.apps.mytracks.util.PreferencesUtils;
-import com.google.android.apps.mytracks.util.TrackRecordingServiceConnectionUtils;
-
 import java.io.IOException;
 
-import br.com.bioscada.apps.biotracks.R;
+import br.com.bioscada.apps.biotracks.fragments.ConfirmDeleteDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ConfirmDeleteDialogFragment.ConfirmDeleteCaller;
+import br.com.bioscada.apps.biotracks.fragments.ExportDialogFragment.ExportType;
+import br.com.bioscada.apps.biotracks.fragments.InstallEarthDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ShareTrackDialogFragment;
+import br.com.bioscada.apps.biotracks.fragments.ShareTrackDialogFragment.ShareTrackCaller;
+import br.com.bioscada.apps.biotracks.io.drive.SendDriveActivity;
+import br.com.bioscada.apps.biotracks.io.file.TrackFileFormat;
+import br.com.bioscada.apps.biotracks.io.file.exporter.SaveActivity;
+import br.com.bioscada.apps.biotracks.io.fusiontables.SendFusionTablesActivity;
+import br.com.bioscada.apps.biotracks.io.gdata.maps.MapsConstants;
+import br.com.bioscada.apps.biotracks.io.maps.SendMapsActivity;
+import br.com.bioscada.apps.biotracks.io.sendtogoogle.SendRequest;
+import br.com.bioscada.apps.biotracks.io.sendtogoogle.SendToGoogleUtils;
+import br.com.bioscada.apps.biotracks.io.sendtogoogle.UploadResultActivity;
+import br.com.bioscada.apps.biotracks.io.spreadsheets.SendSpreadsheetsActivity;
+import br.com.bioscada.apps.biotracks.io.sync.SyncUtils;
+import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
+import br.com.bioscada.apps.biotracks.services.tasks.CheckPermissionAsyncTask;
+import br.com.bioscada.apps.biotracks.services.tasks.CheckPermissionAsyncTask.CheckPermissionCaller;
+import br.com.bioscada.apps.biotracks.util.AnalyticsUtils;
+import br.com.bioscada.apps.biotracks.util.GoogleEarthUtils;
+import br.com.bioscada.apps.biotracks.util.IntentUtils;
+import br.com.bioscada.apps.biotracks.util.PreferencesUtils;
+import br.com.bioscada.apps.biotracks.util.TrackRecordingServiceConnectionUtils;
 
 /**
  * An abstract class for the following common tasks across
@@ -118,7 +117,7 @@ public abstract class AbstractSendToGoogleActivity extends AbstractMyTracksActiv
     switch (requestCode) {
       case DRIVE_REQUEST_CODE:
         SendToGoogleUtils.cancelNotification(this, SendToGoogleUtils.DRIVE_NOTIFICATION_ID);
-        if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
           onDrivePermissionSuccess();
         } else {
           onPermissionFailure();
@@ -126,7 +125,7 @@ public abstract class AbstractSendToGoogleActivity extends AbstractMyTracksActiv
         break;
       case FUSION_TABLES_REQUEST_CODE:
         SendToGoogleUtils.cancelNotification(this, SendToGoogleUtils.FUSION_TABLES_NOTIFICATION_ID);
-        if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
           onFusionTablesSuccess();
         } else {
           onPermissionFailure();
@@ -134,7 +133,7 @@ public abstract class AbstractSendToGoogleActivity extends AbstractMyTracksActiv
         break;
       case SPREADSHEETS_REQUEST_CODE:
         SendToGoogleUtils.cancelNotification(this, SendToGoogleUtils.SPREADSHEETS_NOTIFICATION_ID);
-        if (resultCode == RESULT_OK) {
+        if (resultCode == Activity.RESULT_OK) {
           onSpreadsheetsPermissionSuccess();
         } else {
           onPermissionFailure();
