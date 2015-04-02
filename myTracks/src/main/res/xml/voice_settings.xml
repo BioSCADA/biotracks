@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Copyright 2012 Google Inc., 2014 Edwin Woudt
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:dslv="http://schemas.android.com/apk/res-auto"
+  android:title="@string/settings_voice" >
+  <br.com.bioscada.apps.biotracks.settings.IntegerListPreference
+    android:defaultValue="-1000"
+    android:key="@string/voice_split_frequency_key"
+    android:title="@string/settings_voice_split_frequency" />
+  <com.mobeta.android.dslv.DragSortListPreference
+	android:defaultValue="@array/voice_announcement_defaultsplit"
+	android:entries="@array/voice_announcement_entries_split"
+	android:entryValues="@array/voice_announcement_values_split"
+	android:key="@string/voice_split_announcement_key"
+	android:persistent="true"
+	android:title="@string/settings_voice_split_announcement" 
+	dslv:array_adapter_view="@layout/dslv_list_item_simple_checkable"
+	dslv:text_field="@id/dslv_text"
+	dslv:pref_layout="@layout/dslv_sort_list_array_dialog_preference" />
+  <br.com.bioscada.apps.biotracks.settings.IntegerListPreference
+    android:defaultValue="60"
+    android:key="@string/voice_1_frequency_key"
+    android:title="@string/settings_voice_1_frequency" />
+  <com.mobeta.android.dslv.DragSortListPreference
+	android:defaultValue="@array/voice_announcement_default1"
+	android:entries="@array/voice_announcement_entries"
+	android:entryValues="@array/voice_announcement_values"
+	android:key="@string/voice_1_announcement_key"
+	android:persistent="true"
+	android:title="@string/settings_voice_1_announcement" 
+	dslv:array_adapter_view="@layout/dslv_list_item_simple_checkable"
+	dslv:text_field="@id/dslv_text"
+	dslv:pref_layout="@layout/dslv_sort_list_array_dialog_preference" />
+  <br.com.bioscada.apps.biotracks.settings.IntegerListPreference
+    android:defaultValue="0"
+    android:key="@string/voice_2_frequency_key"
+    android:title="@string/settings_voice_2_frequency" />
+  <com.mobeta.android.dslv.DragSortListPreference
+	android:defaultValue="@array/voice_announcement_default2"
+	android:entries="@array/voice_announcement_entries"
+	android:entryValues="@array/voice_announcement_values"
+	android:key="@string/voice_2_announcement_key"
+	android:persistent="true"
+	android:title="@string/settings_voice_2_announcement" 
+	dslv:array_adapter_view="@layout/dslv_list_item_simple_checkable"
+	dslv:text_field="@id/dslv_text"
+	dslv:pref_layout="@layout/dslv_sort_list_array_dialog_preference" />
+</PreferenceScreen>
