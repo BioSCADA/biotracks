@@ -94,8 +94,6 @@ public class PolarMessageParser implements MessageParser {
                 Log.d("POLAR", "INVALID > 2000 | " + crr );
                 return null;
             }
-            rrVector.add((float)crr);
-            lastHeartRate = crr; // Remember good value for next time.
 
             if(i==6) {
                 heartRate = crr;
@@ -107,6 +105,9 @@ public class PolarMessageParser implements MessageParser {
             if(i==10) {
                 heartRateRC2 = crr;
             }
+            
+            rrVector.add((float)crr);
+            lastHeartRate = crr; // Remember good value for next time.
 
             Log.d("POLAR", System.currentTimeMillis() + " l " +rrVector.size()+  " i = " + i + " RR = " + crr+ " iBat = " + iBat+ " iSize = " + iSize);
 

@@ -53,6 +53,7 @@ import br.com.bioscada.apps.biotracks.util.UnitConversions;
  *
  * @author Sandor Dornbush
  * @author Rodrigo Damazio
+ * @author schmaedech
  */
 public class ChartFragment extends Fragment implements TrackDataListener {
 
@@ -438,7 +439,12 @@ public class ChartFragment extends Fragment implements TrackDataListener {
         zoomControls.setIsZoomInEnabled(chartView.canZoomIn());
         zoomControls.setIsZoomOutEnabled(chartView.canZoomOut());
     }
+    /**
+     * To zoom out.
+     */
+    private void toggleLegend() {
 
+    }
     /**
      * Runs a runnable on the UI thread if possible.
      *

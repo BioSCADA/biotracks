@@ -63,7 +63,7 @@ public class PreferencesUtils {
     public static final boolean CHART_SHOW_PACER_DEFAULT = false;
     public static final boolean CHART_SHOW_POWER_DEFAULT = true;
     public static final boolean CHART_SHOW_SPEED_DEFAULT = true;
-    public static final String CHART_X_AXIS_DEFAULT = "TIME";
+    public static final String CHART_X_AXIS_DEFAULT = "DISTANCE";
 
     public static final String DEFAULT_ACTIVITY_DEFAULT = "";
 

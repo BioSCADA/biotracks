@@ -29,7 +29,6 @@ import android.content.Context;
 import android.os.Build;
 import android.util.Log;
 
-
 import com.google.android.lib.mytracks.content.Sensor;
 
 import br.com.bioscada.apps.biotracks.services.sensors.SensorManager;
@@ -150,7 +149,7 @@ public class BluetoothLeManager extends SensorManager {
         Log.e(TAG, "Could not locate decoder for characteristic " + ch.getUuid());
         return;
       }
-      Sensor.SensorDataSet ds = mSensor.read(gatt, ch);
+      Sensor.SensorDataSet ds = mSensor.parseBuffer(gatt, ch);
       if (ds == null) {
         return;
       }

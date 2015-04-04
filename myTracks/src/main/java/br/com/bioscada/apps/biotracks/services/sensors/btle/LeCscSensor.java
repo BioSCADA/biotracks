@@ -37,6 +37,7 @@ import br.com.bioscada.apps.biotracks.services.sensors.CadenceCounter;
  * 
  * @author dgupta
  * @author Frederic Nadeau
+ * @author Diego Schmaedech schmaedech@gmail.com
  */
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
 public class LeCscSensor extends BluetoothLeSensor {
@@ -68,15 +69,15 @@ public class LeCscSensor extends BluetoothLeSensor {
     return UUID.fromString(uuid.CSC_MEASUREMENT_UUID);
   }
 
-  
+
   /**
-   * Read populates a {@link SensorDataSet} with content read from the Bluetooth
+   * Read populates a {@link com.google.android.lib.mytracks.content.Sensor.SensorDataSet} with content read from the Bluetooth
    * HRM server. Bluetooth Smart HRM servers are required to support notifications per
    * <a href='https://www.bluetooth.org/docman/handlers/downloaddoc.ashx?doc_id=239866'>
    * HRM Specification</a>. 
    */
   @Override
-  public Sensor.SensorDataSet read(BluetoothGatt gatt, BluetoothGattCharacteristic ch) {
+  public Sensor.SensorDataSet parseBuffer(BluetoothGatt gatt, BluetoothGattCharacteristic ch) {
     byte[] val = ch.getValue();
     
     int flag = (int)val[0];

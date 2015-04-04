@@ -32,6 +32,7 @@ import java.util.UUID;
  * supports reading data from a Bluetooth GATT server using notifications.
  * 
  * @author dgupta
+ * @author schmaedech
  */
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR2)
 public abstract class BluetoothLeSensor {
@@ -72,9 +73,9 @@ public abstract class BluetoothLeSensor {
    * 
    * @param gatt A GATT endpoint representing the remote server
    * @param ch The characteristic associated with {@link gatt}.
-   * @return A {@link SensorDataSet} representing the latest value.
+   * @return A {@link com.google.android.lib.mytracks.content.Sensor.SensorDataSet} representing the latest value.
    */
-  public abstract Sensor.SensorDataSet read(BluetoothGatt gatt, BluetoothGattCharacteristic ch);
+  public abstract Sensor.SensorDataSet parseBuffer(BluetoothGatt gatt, BluetoothGattCharacteristic ch);
   
   public int getState(){
     return mState;

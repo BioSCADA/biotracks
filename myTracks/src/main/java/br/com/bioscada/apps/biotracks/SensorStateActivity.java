@@ -27,7 +27,6 @@ import com.google.android.lib.mytracks.content.Sensor;
 import com.google.android.lib.mytracks.services.ITrackRecordingService;
 import com.google.protobuf.InvalidProtocolBufferException;
 
-import br.com.bioscada.apps.biotracks.R;
 import br.com.bioscada.apps.biotracks.services.TrackRecordingServiceConnection;
 import br.com.bioscada.apps.biotracks.services.sensors.SensorManager;
 import br.com.bioscada.apps.biotracks.services.sensors.SensorManagerFactory;

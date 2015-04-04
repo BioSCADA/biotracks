@@ -17,7 +17,6 @@ package br.com.bioscada.apps.biotracks.io.file.exporter;
 
 import android.content.Context;
 import android.location.Location;
-import android.util.Log;
 
 import com.google.android.lib.mytracks.content.MyTracksLocation;
 import com.google.android.lib.mytracks.content.Sensor;
@@ -31,7 +30,6 @@ import java.util.Locale;
 
 import br.com.bioscada.apps.biotracks.R;
 import br.com.bioscada.apps.biotracks.io.file.TrackFileFormat;
-import br.com.bioscada.apps.biotracks.io.file.exporter.TrackWriter;
 import br.com.bioscada.apps.biotracks.util.StringUtils;
 
 /**
@@ -50,6 +48,7 @@ import br.com.bioscada.apps.biotracks.util.StringUtils;
  * rate (bpm)","Battery level (%)"
  *
  * @author Rodrigo Damazio
+ * @author schmaedech
  */
 public class CsvTrackWriter implements TrackWriter {
 

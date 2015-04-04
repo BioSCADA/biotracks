@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/diego/Documents/MyTracks/biotracks/biotracks/myTracksLib/src/main/res/values/third_party.xml -->
+    <!-- From: file:/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracksLib/src/main/res/values/third_party.xml -->
     <eat-comment/>
     <string name="broadcast_notifications_permission">com.google.android.apps.mytracks.TRACK_NOTIFICATIONS</string>
-    <!-- From: file:/home/diego/Documents/MyTracks/biotracks/biotracks/myTracksLib/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracksLib/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="lib_name">My Tracks Base Library</string>
-    <!-- From: file:/home/diego/Documents/MyTracks/biotracks/biotracks/myTracksLib/src/main/res/values/third_party.xml -->
+    <!-- From: file:/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracksLib/src/main/res/values/third_party.xml -->
     <eat-comment/>
     <string name="mytracks_service_class">com.google.android.apps.mytracks.services.TrackRecordingService</string>
     <string name="mytracks_service_package">br.com.bioscada.apps.biotracks</string>
