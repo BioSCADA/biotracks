@@ -2,193 +2,193 @@
 <items version="2" >
 
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/exploded-aar/biotracks/myTracksLib/unspecified/classes.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/guava-jdk5-13.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="774a71adca49f90fe68881950bcfb37342c83a63">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/classes-d96a40ed414ee5e4b68e2a94532c0d780a11c6f4.jar" />
+        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/guava-jdk5-13.0-d4685d49503b2d3232abba81bb4f67c005aa93a2.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-http-client-android-1.12.0-beta.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="83dc8aa4c4affd3381008cabc6eba78ce30feebd">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-http-client-android-1.12.0-beta-80616f17d1421c8b4760ebcf3dfaaadcf9216217.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-api-client-1.12.0-beta.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="03d81483b55e13f72fdcde787cd3a20ec0f7e1eb">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-client-1.12.0-beta-8dda17ab091c35332a6fd1973b5d6277c0733208.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/gdata-spreadsheet-3.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="13a67aaf342b9d71311e5d974bac5ececc9bd0a0">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-spreadsheet-3.0-69b8e7f739de66e4032a7a04b9e640e3cd295194.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/gdata-core-1.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="6ff0dba2ad4e59fdda638b00d6773f3e48b61e16">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-core-1.0-1ced65960dba95c417acdde2b58c7227a2797fab.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-api-client-android-1.12.0-beta.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="a1f19b7322a3434b9a4a8d3adab3c6e253dc43cf">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-client-android-1.12.0-beta-e843ec1f8408cc4b6a93e3994fe1e069a3b2b1fb.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/jackson-core-asl-1.9.9.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="0b198f9d20dcc5bd2fe211e10f4110639b8243d6">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/jackson-core-asl-1.9.9-5ec937fdb7f17aec00135fb31c0014f24e6d3a5d.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-api-services-drive-v2-rev30-1.12.0-beta.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="d9aae4830e373e7e68975bc2e1a8116816d095b4">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-services-drive-v2-rev30-1.12.0-beta-6427e28134960878d85383f714e40b097a67dd3d.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-http-client-gson-1.12.0-beta.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="76b9aec3a810b64404a4fda200f0df9fb297c7a7">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-http-client-gson-1.12.0-beta-aaf8b6f93216609bbe10664926b727446e585932.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/jackson-core-2.0.5.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="3262ffaa644eaa2a42ebbf2eb490bc023645f6f1">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/jackson-core-2.0.5-54f9463207f2305b3b7c6b32b1f3c2f6ada91143.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-play-services.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f0d8e4a84fad131bc291c3c4850afcaa8ba0b299">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-play-services-e07b0d2aba8fce72c6b89362ad0b0a6e03670301.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-common.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="db18952f1f8a7933a3660f860c7f1cd783c7b184">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-common-a1753d70c7f90be0ba00543158444bc666220dd7.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/android-support-v4.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/android-support-v4.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="bd6479f5dd592790607e0504e66e0f31c2b4d308">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/android-support-v4-4e8f173cf3d84181cebf1e3c4bedd97b577dafe5.jar" />
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/android-support-v4-aca4974c9b61e65e0bea89750aa20f4752ae8cbb.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-oauth-client-1.12.0-beta.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-http-client-jackson-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="3ce6992d21f067c2fa2e0b7c77567c2fe94aee8e">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-oauth-client-1.12.0-beta-cc862ded4f38867238f072b282e8cd359f9ebe1e.jar" />
+        sha1="f8983a933c71ffb89452e01e4927cd8bc9becf43">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-http-client-jackson-1.12.0-beta-fe10ebb12b0a8c56bedb77e8b40b1fd2e3075a50.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/gson-2.1.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-http-client-jackson2-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/gson-2.1-bbdf1d2ecfd4391d0c08e25c3cf46594c341bcbe.jar" />
+        sha1="e74bc210968484f04c30b3d1490d9a183112855d">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.12.0-beta-3084a395f031ce6cffbbee6a0eaafd6a61e8874a.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/antlib.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-http-client-android-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="157a65de5235dab0b9064ef02f2957809c73a76f">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/antlib-b2311b0526fecd8e1acb882c82edcaa1ad60e461.jar" />
+        sha1="83dc8aa4c4affd3381008cabc6eba78ce30feebd">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-http-client-android-1.12.0-beta-d1372a4c43d53c78f5947e1b38722f7e33e682df.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/gdata-client-meta-1.0.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-http-client-gson-1.12.0-beta.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="76b9aec3a810b64404a4fda200f0df9fb297c7a7">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-http-client-gson-1.12.0-beta-e7c1b5905f5230b69778cb78cf4f3e49546e7e2e.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/libGoogleAnalytics.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d0254fe638021ff2ae4fe5bd53c2937006fdab5">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/libGoogleAnalytics-3abe6a47cd99c5f3da394d23cabee0f03b837ce2.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/jackson-core-asl-1.9.9.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="0b198f9d20dcc5bd2fe211e10f4110639b8243d6">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/jackson-core-asl-1.9.9-5ea84cd13964ca7be661445e1a81f1c0b1c94fd7.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/gdata-client-1.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="b134941c07a26fca300c53139299619d44f82e9b">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/gdata-client-1.0-63d0afe2c363c9b2314f1c296b0438ba85abcb62.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-api-services-drive-v2-rev30-1.12.0-beta.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d9aae4830e373e7e68975bc2e1a8116816d095b4">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-api-services-drive-v2-rev30-1.12.0-beta-a1673d018fff49338ebb1c0cb0439dc8456508b6.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-play-services.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f0d8e4a84fad131bc291c3c4850afcaa8ba0b299">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-play-services-f465ba567ea4fcaf7276e14e8f4ebcbe6e023da5.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/jackson-core-2.0.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3262ffaa644eaa2a42ebbf2eb490bc023645f6f1">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/jackson-core-2.0.5-9ab8d8941043977fc38944f8623c726be9637f56.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/gdata-client-meta-1.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="b72907f7afdc175df85c13c90808a80b17333894">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-client-meta-1.0-7037bc4f806cb34dfef01d77695928260ed6a28b.jar" />
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/gdata-client-meta-1.0-87bfa568aae7ee4d8807df5ab6a18390cceac14b.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f556e9c9c0914c9797ee165efb8d64a8ef11166c">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-api-services-fusiontables-v1-rev16-1.12.0-beta-fcee4c93cc09b6c21e248953b77f079d6f0c38a9.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/gdata-spreadsheet-3.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="13a67aaf342b9d71311e5d974bac5ececc9bd0a0">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/gdata-spreadsheet-3.0-41a3a0535fb3f34838b6659f89d5a4483cb34d9e.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/jsr305.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="20d240a736e261ebc3f1e9448cb26fd75ba46154">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/jsr305-7f459c06d7902e08c8e665254067d3a42c299eb6.jar" />
     </item>
     <item
         jar="/Users/schmaedech/.gradle/caches/modules-2/files-2.1/com.google.protobuf/protobuf-java/2.5.0/a10732c76bfacdbd633a7eb0f7968b1059a65dfa/protobuf-java-2.5.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="a10732c76bfacdbd633a7eb0f7968b1059a65dfa">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/protobuf-java-2.5.0-55b162b84e0d83a7ae7529d470511fc255382633.jar" />
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/protobuf-java-2.5.0-55b162b84e0d83a7ae7529d470511fc255382633.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/gdata-spreadsheet-meta-3.0.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/gson-2.1.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="446a0fe46f7ac4b697a41a9cfb5984e5afcb0bb9">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-spreadsheet-meta-3.0-83839d7aaf5da4e3ed99722d9fa23c8107181581.jar" />
+        sha1="2e66da15851f9f5b5079228f856c2f090ba98c38">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/gson-2.1-7b8d28f6d0d098f9671bc9804c569673f941c4ee.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-http-client-jackson-1.12.0-beta.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/antlib.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="f8983a933c71ffb89452e01e4927cd8bc9becf43">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-http-client-jackson-1.12.0-beta-ba9c0773bb648a2c6ec3c7213c362bdfe1b257f5.jar" />
+        sha1="157a65de5235dab0b9064ef02f2957809c73a76f">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/antlib-392bb8209736ca1a2916ed722f300a1cc143fa19.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/guava-jdk5-13.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="381ae6c8add7c98e9bcddb1e0b898400cd6fc3f7">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/guava-jdk5-13.0-c5cb88dda97fa74948a13fce27f21e3736d945be.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/jsr305.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="20d240a736e261ebc3f1e9448cb26fd75ba46154">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/jsr305-ecaf1f474b7709f2827153296251fea4578f4a5b.jar" />
-    </item>
-    <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-http-client-1.12.0-beta.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-http-client-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="4a7581810ad5b2bc76ae135a884a7a8ac5501a25">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-http-client-1.12.0-beta-689752471a83779b82b7fcc12b9e108ed29fca9b.jar" />
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-http-client-1.12.0-beta-13b77ced149eb3c26bab64d3bec5129142da022e.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-http-client-jackson2-1.12.0-beta.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/gdata-spreadsheet-meta-3.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="e74bc210968484f04c30b3d1490d9a183112855d">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-http-client-jackson2-1.12.0-beta-62c4f5be602fae5408e5841192f6ab7c97c26abe.jar" />
+        sha1="446a0fe46f7ac4b697a41a9cfb5984e5afcb0bb9">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/gdata-spreadsheet-meta-3.0-8e68940c58ca8d92446766d89e6c24445987a786.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/libGoogleAnalytics.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/gdata-core-1.0.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="8d0254fe638021ff2ae4fe5bd53c2937006fdab5">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/libGoogleAnalytics-3497a9b6eb19455bb3515b7b51ccc4aa2c9fb786.jar" />
+        sha1="6ff0dba2ad4e59fdda638b00d6773f3e48b61e16">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/gdata-core-1.0-4d80fd30b7b48f37e9bbb7766a7a54065e2ca082.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/google-api-services-fusiontables-v1-rev16-1.12.0-beta.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-common.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="f556e9c9c0914c9797ee165efb8d64a8ef11166c">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/google-api-services-fusiontables-v1-rev16-1.12.0-beta-354fd8e6ac6ae12cdf7266a98ea56da766c8aeea.jar" />
+        sha1="db18952f1f8a7933a3660f860c7f1cd783c7b184">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-common-5333c8d008905bebb4ff24c00239ffa7c5c09f8f.jar" />
     </item>
     <item
-        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/libs/gdata-client-1.0.jar"
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-api-client-android-1.12.0-beta.jar"
         jumboMode="false"
         revision="21.1.2"
-        sha1="b134941c07a26fca300c53139299619d44f82e9b">
-        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/myTracks/build/intermediates/pre-dexed/debug/gdata-client-1.0-c30512765d5457937b66ad1a9dd5508fe1423d41.jar" />
+        sha1="a1f19b7322a3434b9a4a8d3adab3c6e253dc43cf">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-api-client-android-1.12.0-beta-a794194bffcd661b6c7fcd66db19bcfd7742f249.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/exploded-aar/biotracks/myTracksLib/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="cf517faab6eeb0a754e8a9f966948d8c9d2e9c78">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/classes-dc40d61741deef3ab5580c8fa40068ea4919830f.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-api-client-1.12.0-beta.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="03d81483b55e13f72fdcde787cd3a20ec0f7e1eb">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-api-client-1.12.0-beta-4a8fff07c00d223c3bc129e1f3af22a7a658f501.jar" />
+    </item>
+    <item
+        jar="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/libs/google-oauth-client-1.12.0-beta.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="3ce6992d21f067c2fa2e0b7c77567c2fe94aee8e">
+        <dex dex="/Users/schmaedech/Documents/Github/BioSCADA/biotracks/bioTracks/build/intermediates/pre-dexed/debug/google-oauth-client-1.12.0-beta-a5887cee679b671b54dae09d8a89a8bdebb4ce3d.jar" />
     </item>
 
 </items>

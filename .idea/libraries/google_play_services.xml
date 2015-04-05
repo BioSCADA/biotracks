@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="google-play-services">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/myTracks/libs/google-play-services.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bioTracks/libs/google-play-services.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

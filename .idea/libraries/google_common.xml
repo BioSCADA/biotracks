@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="google-common">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/myTracks/libs/google-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bioTracks/libs/google-common.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

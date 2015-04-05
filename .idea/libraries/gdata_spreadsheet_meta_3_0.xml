@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="gdata-spreadsheet-meta-3.0">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/myTracks/libs/gdata-spreadsheet-meta-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bioTracks/libs/gdata-spreadsheet-meta-3.0.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

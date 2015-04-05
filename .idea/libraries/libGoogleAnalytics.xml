@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="libGoogleAnalytics">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/myTracks/libs/libGoogleAnalytics.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bioTracks/libs/libGoogleAnalytics.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

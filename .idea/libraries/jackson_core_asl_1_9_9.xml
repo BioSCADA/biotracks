@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="jackson-core-asl-1.9.9">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/myTracks/libs/jackson-core-asl-1.9.9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bioTracks/libs/jackson-core-asl-1.9.9.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

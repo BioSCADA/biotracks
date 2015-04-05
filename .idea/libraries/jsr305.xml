@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="jsr305">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/myTracks/libs/jsr305.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bioTracks/libs/jsr305.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
