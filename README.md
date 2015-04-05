@@ -23,5 +23,5 @@ Centralize psychophysiological data in a single location and measure yourself!
 
 Want to learn more? [See webpage.](https://bioscada.me)
  
-<a href="https://bioscada.me/bsweb/pages/mytracks/bioTracks-release.apk"> Download APK </a>.
+<a href="https://bioscada.me/bsweb/pages/biotracks/bioTracks-release.apk"> Download APK </a>.
 
