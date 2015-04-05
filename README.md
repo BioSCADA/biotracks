@@ -6,6 +6,8 @@ New features:
 
 -Neurosky bluetooth driver <a href="http://neurosky.com/"> Neurosky Mindwave </a>.
 
+-Bluetooth Low Energy Sensor
+
 -Breathing pacer <a href="https://play.google.com/store/apps/details?id=me.bioscada.Respirar"> Breathing App </a> and <a href="https://bioscada.me/bsweb/pages/mytracks/index.html"> Breathing online </a>.
 
 
@@ -21,5 +23,5 @@ Centralize psychophysiological data in a single location and measure yourself!
 
 Want to learn more? [See webpage.](https://bioscada.me)
  
-<a href="https://bioscada.me/bsweb/pages/mytracks/myTracks-release.apk"> Download APK </a>.
+<a href="https://bioscada.me/bsweb/pages/mytracks/bioTracks-release.apk"> Download APK </a>.
 
