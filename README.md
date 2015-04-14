@@ -4,12 +4,13 @@ This is MyTracks for BioSCADA
 
 New features:
 
--Neurosky bluetooth driver <a href="http://neurosky.com/"> Neurosky Mindwave </a>.
+-Neurosky Bluetooth <a href="http://neurosky.com/"> Neurosky Mindwave </a>.
 
--Bluetooth Low Energy Sensor
+-Polar BLE - Bluetooth Low Energy Sensor
 
--Breathing pacer <a href="https://play.google.com/store/apps/details?id=me.bioscada.Respirar"> Breathing App </a> and <a href="https://bioscada.me/bsweb/pages/mytracks/index.html"> Breathing online </a>.
+-Breathing pacer <a href="https://play.google.com/store/apps/details?id=me.bioscada.Respirar"> Breathing App </a> and <a href="https://bioscada.me/bsweb/pages/respirar/index.html"> Breathing online </a>.
 
+-See how to BioTracks and <a href="http://kubios.uef.fi/"> Kubios HRV </a> integration <a href="https://bioscada.me/bsweb/pages/biotracks/docs/manual.pdf"> Manual </a>.
 
 ### BioSCADA - SCADA for Humans
 
