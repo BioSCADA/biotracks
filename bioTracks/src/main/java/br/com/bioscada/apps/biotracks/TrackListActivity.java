@@ -375,8 +375,14 @@ public class TrackListActivity extends AbstractSendToGoogleActivity
         String sharedOwner = cursor.getString(sharedOwnerIndex);
         String totalTime = StringUtils.formatElapsedTime(cursor.getLong(totalTimeIndex));
         String totalDistance = StringUtils.formatDistance(
-            TrackListActivity.this, cursor.getDouble(totalDistanceIndex), metricUnits);
-        int markerCount = myTracksProviderUtils.getWaypointCount(trackId);
+                TrackListActivity.this, cursor.getDouble(totalDistanceIndex), metricUnits);
+          int markerCount = 0 ;
+          try{
+             markerCount = myTracksProviderUtils.getWaypointCount(trackId);
+          }catch (Exception e){
+            Log.d("BIOTRACKS", e.getMessage());
+          }
+
         long startTime = cursor.getLong(startTimeIndex);
         String category = icon != null && !icon.equals("") ? null : cursor.getString(categoryIndex);
         String description = cursor.getString(descriptionIndex);

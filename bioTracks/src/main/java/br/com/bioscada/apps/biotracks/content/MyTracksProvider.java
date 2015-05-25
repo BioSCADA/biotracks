@@ -355,9 +355,15 @@ public class MyTracksProvider extends ContentProvider {
       default:
         throw new IllegalArgumentException("Unknown url " + url);
     }
-    Cursor cursor = queryBuilder.query(
-        db, projection, selection, selectionArgs, null, null, sortOrder);
-    cursor.setNotificationUri(getContext().getContentResolver(), url);
+    Cursor cursor = null;
+    try{
+      cursor =queryBuilder.query(db, projection, selection, selectionArgs, null, null, sortOrder);
+      cursor.setNotificationUri(getContext().getContentResolver(), url);
+    }catch (Exception e){
+      Log.d("BIOTRACKS", e.getMessage());
+    }
+
+
     return cursor;
   }
 

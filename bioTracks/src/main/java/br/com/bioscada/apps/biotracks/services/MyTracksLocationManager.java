@@ -23,6 +23,7 @@ import android.location.LocationManager;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.Log;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesClient.ConnectionCallbacks;
@@ -109,7 +110,12 @@ public class MyTracksLocationManager {
 
     if (enableLocaitonClient) {
       locationClient = new LocationClient(context, connectionCallbacks, onConnectionFailedListener);
-      locationClient.connect();
+      try{
+        locationClient.connect();
+      }catch (Exception e){
+        Log.d("BIOTRACKS", e.getMessage());
+      }
+
     } else {
       locationClient = null;
     }
@@ -129,7 +135,12 @@ public class MyTracksLocationManager {
    */
   public void close() {
     if (locationClient != null) {
-      locationClient.disconnect();
+        try{
+            locationClient.disconnect();
+        }catch (Exception e){
+            Log.d("BIOTRACKS", e.getMessage());
+        }
+
     }
     contentResolver.unregisterContentObserver(observer);
   }

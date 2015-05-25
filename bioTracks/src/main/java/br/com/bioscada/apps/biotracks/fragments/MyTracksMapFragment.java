@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.location.Location;
 import android.os.Bundle;
 import android.os.Looper;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -347,7 +348,12 @@ public class MyTracksMapFragment extends SupportMapFragment implements TrackData
       myTracksLocationManager.removeLocationUpdates(locationListener);
       locationListener = null;
     }
-    myTracksLocationManager.close();
+    try{
+      myTracksLocationManager.close();
+    }catch (Exception e){
+      Log.d("BIOTRACKS", e.getMessage());
+    }
+
   }
 
   @Override
